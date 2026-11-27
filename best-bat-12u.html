@@ -291,6 +291,24 @@
       .pages a[aria-current="page"] { background: #f3efe3; color: #152a44; }
       a.btn { display: inline-flex; align-items: center; text-decoration: none; }
       a.tile { text-decoration: none; }
+    
+      /* ---------- mobile nav: hamburger toggle ---------- */
+      .nav-toggle { display: none; }
+      @media (max-width: 860px) {
+        .nav-toggle {
+          display: inline-flex; align-items: center; gap: 8px;
+          background: transparent; border: 1px solid rgba(255,255,255,.35); color: #f3efe3;
+          border-radius: 8px; padding: 8px 12px; font-size: .95rem; font-weight: 700;
+          min-height: 40px; margin: 4px 0 10px; cursor: pointer;
+        }
+        .nav-toggle:hover { background: rgba(255,255,255,.1); }
+        nav.pages {
+          display: none; flex-direction: column; align-items: stretch; gap: 2px;
+          padding: 0 0 10px; max-height: calc(100vh - 130px); overflow-y: auto;
+        }
+        header.site.nav-open nav.pages { display: flex; }
+        nav.pages a { justify-content: flex-start; }
+      }
     </style>
   </head>
   <body>
@@ -301,6 +319,7 @@
           <div class="brandname">Hoosier Diamond <span>Directory</span></div>
           <div class="brandsub">Youth baseball in Indiana — tournaments,<br />training, gear &amp; straight answers</div>
         </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="topnav">☰ Menu</button>
         <nav class="pages" id="topnav" aria-label="Directory pages"><a href="index.html">Home</a><a href="tournaments.html">Tournaments</a><a href="tournaments-10u.html">10U Tournaments</a><a href="tournaments-12u.html">12U Tournaments</a><a href="player-pool.html">Player Pool</a><a href="cages.html">Cages</a><a href="cages-indianapolis.html">Cages Indianapolis</a><a href="cages-fort-wayne.html">Cages Fort Wayne</a><a href="bats.html">Best Bats</a><a href="best-bat-10u.html">Best Bat 10U</a><a href="best-bat-12u.html" aria-current="page">Best Bat 12U</a><a href="bat-sizing.html">Bat Sizing</a><a href="bat-size-7-year-old.html">Bat Size Age 7</a><a href="bat-size-8-year-old.html">Bat Size Age 8</a><a href="bat-size-9-year-old.html">Bat Size Age 9</a><a href="training-tools.html">Training Tools</a><a href="best-training-bat.html">Best Training Bat</a><a href="gloves.html">Best Gloves</a><a href="best-glove-10u.html">Best Glove 10U</a><a href="best-cleats.html">Best Cleats</a><a href="cleats.html">Starter Kit</a><a href="first-season.html">First Season</a><a href="rec-leagues.html">Rec Leagues</a><a href="bat-rules.html">Bat Rules</a><a href="usssa-vs-usa-bat-rules.html">USSSA vs USA</a><a href="questions.html">Team Questions</a><a href="costs-indiana.html">Cost in Indiana</a><a href="how.html">How It Works</a></nav>
       </div>
     </header>
@@ -332,8 +351,27 @@
 <footer class="site">
       <div class="wrap">
         <span>Hoosier Diamond Directory — now with Covington 2027, more Indiana tournaments, Player Pool, the glove and bat sizing guides, training tools, and new Best Bat for 10U and 12U, Best Glove for 10U, Bat Size for 7-, 8- and 9-Year-Old, Best Cleats, and USSSA vs USA Bat Rules in plain English, and Indiana 10U and 12U Tournaments 2027, and Batting Cages Near Indianapolis and Fort Wayne, and How Much Travel Baseball Costs in Indiana (2027, per age) and Best Training Bat for Youth, and Indiana Rec Baseball Leagues (Little League, Babe Ruth / Cal Ripken and independent community leagues).</span>
-        <span>Contact: <a href="mailto:hoosierdiamonddirector@gmail.com">hoosierdiamonddirector@gmail.com</a> · <a href="https://player-pool.net/" target="_blank" rel="noopener">player-pool.net</a> · <a href="privacy.html">Privacy Policy</a> · <a href="disclosure.html">Affiliate Disclosure</a></span>
+        <span>Contact: <a href="mailto:hoosierdiamonddirectory@gmail.com">hoosierdiamonddirectory@gmail.com</a> · <a href="https://player-pool.net/" target="_blank" rel="noopener">player-pool.net</a> · <a href="privacy.html">Privacy Policy</a> · <a href="disclosure.html">Affiliate Disclosure</a></span>
         <span>Listings &amp; prices are typical ranges unless a host fee is shown, verified before anything goes public.</span>
       </div>
-    </footer>  </body>
+    </footer>  
+    <script>
+      /* mobile nav toggle: show/hide the page menu on small screens */
+      (function () {
+        var btn = document.querySelector('.nav-toggle');
+        var header = document.querySelector('header.site');
+        if (!btn || !header) return;
+        btn.addEventListener('click', function () {
+          var open = header.classList.toggle('nav-open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        header.querySelectorAll('nav.pages a').forEach(function (a) {
+          a.addEventListener('click', function () {
+            header.classList.remove('nav-open');
+            btn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      })();
+    </script>
+</body>
 </html>

@@ -47,5 +47,5 @@ The builder that produced the split lives in `/tmp/split_build.py`
 Product links are plain retailer links for now — no affiliate IDs yet.
 Amazon Associates first, then Dick's via CJ (see
 `~/workspace/hoosier-diamond-affiliate-prep.md`). Contact:
-hoosierdiamonddirector@gmail.com. Facebook:
+hoosierdiamonddirectory@gmail.com. Facebook:
 https://www.facebook.com/profile.php?id=61597191561908
