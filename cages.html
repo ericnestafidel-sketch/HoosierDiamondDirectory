@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light" />
     <link rel="icon" href="logo.jpg" />
-    <title>Batting Cages &amp; Training in Indiana | Hoosier Diamond Directory</title>
-    <meta name="description" content="Indoor batting cages, lessons and memberships across Indiana for the winter months." />
+    <title>Batting Cages &amp; Training Facilities Near Me | Hoosier Diamond Directory</title>
+    <meta name="description" content="Find a batting cage or training facility near you in Indiana — Indianapolis, Fort Wayne, Evansville, South Bend and Elkhart. Hours, prices, and what each one is good for." />
     <link rel="canonical" href="https://hoosier-diamond-directory.vercel.app/cages.html" />
-    <meta property="og:title" content="Batting Cages &amp; Training in Indiana | Hoosier Diamond Directory" />
-    <meta property="og:description" content="Indoor batting cages, lessons and memberships across Indiana for the winter months." />
+    <meta property="og:title" content="Batting Cages &amp; Training Facilities Near Me | Hoosier Diamond Directory" />
+    <meta property="og:description" content="Find a batting cage or training facility near you in Indiana — Indianapolis, Fort Wayne, Evansville, South Bend and Elkhart. Hours, prices, and what each one is good for." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hoosier-diamond-directory.vercel.app/cages.html" />
     <meta property="og:image" content="https://hoosier-diamond-directory.vercel.app/logo.jpg" />
@@ -300,7 +300,7 @@
           <div class="brandsub">Youth baseball in Indiana — tournaments,<br />training, gear &amp; straight answers</div>
         </div>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="topnav">☰ Menu</button>
-        <nav class="pages" id="topnav" aria-label="Directory pages"><a href="index.html">Home</a><a href="tournaments.html">Tournaments</a><a href="tournaments-10u.html">10U Tournaments</a><a href="tournaments-12u.html">12U Tournaments</a><a href="cages.html" aria-current="page">Cages</a><a href="cages-indianapolis.html">Cages Indianapolis</a><a href="cages-fort-wayne.html">Cages Fort Wayne</a><a href="bats.html">Best Bats</a><a href="best-bat-10u.html">Best Bat 10U</a><a href="best-bat-12u.html">Best Bat 12U</a><a href="bat-sizing.html">Bat Sizing</a><a href="bat-size-7-year-old.html">Bat Size Age 7</a><a href="bat-size-8-year-old.html">Bat Size Age 8</a><a href="bat-size-9-year-old.html">Bat Size Age 9</a><a href="training-tools.html">Training Tools</a><a href="best-training-bat.html">Best Training Bat</a><a href="gloves.html">Best Gloves</a><a href="best-glove-10u.html">Best Glove 10U</a><a href="best-cleats.html">Best Cleats</a><a href="cleats.html">Starter Kit</a><a href="first-season.html">First Season</a><a href="rec-leagues.html">Rec Leagues</a><a href="bat-rules.html">Bat Rules</a><a href="usssa-vs-usa-bat-rules.html">USSSA vs USA</a><a href="questions.html">Team Questions</a><a href="costs-indiana.html">Cost in Indiana</a><a href="player-pool.html">Player Pool</a><a href="how.html">How It Works</a></nav>
+        <nav class="pages" id="topnav" aria-label="Directory pages"><a href="index.html">Home</a><a href="tournaments.html">Tournaments</a><a href="tournaments-10u.html">10U Tournaments</a><a href="tournaments-12u.html">12U Tournaments</a><a href="cages.html" aria-current="page">Cages Near Me</a><a href="bats.html">Best Bats</a><a href="best-bat-10u.html">Best Bat 10U</a><a href="best-bat-12u.html">Best Bat 12U</a><a href="bat-sizing.html">Bat Sizing</a><a href="bat-size-7-year-old.html">Bat Size Age 7</a><a href="bat-size-8-year-old.html">Bat Size Age 8</a><a href="bat-size-9-year-old.html">Bat Size Age 9</a><a href="training-tools.html">Training Tools</a><a href="best-training-bat.html">Best Training Bat</a><a href="gloves.html">Best Gloves</a><a href="best-glove-10u.html">Best Glove 10U</a><a href="best-cleats.html">Best Cleats</a><a href="cleats.html">Starter Kit</a><a href="first-season.html">First Season</a><a href="rec-leagues.html">Rec Leagues</a><a href="bat-rules.html">Bat Rules</a><a href="usssa-vs-usa-bat-rules.html">USSSA vs USA</a><a href="questions.html">Team Questions</a><a href="costs-indiana.html">Cost in Indiana</a><a href="player-pool.html">Player Pool</a><a href="how.html">How It Works</a></nav>
       </div>
     </header>
 
@@ -308,10 +308,20 @@
 
 <section class="page active" data-page="cages">
         <div class="crumb">Directory · Page 3</div>
-        <h1 class="pagetitle">Batting Cages &amp; Training in Indiana</h1>
-        <p class="lede">Where Indiana players hit when it's 25 degrees out — which, for winter ball, is half the year. Memberships almost always beat walk-in tokens if your player goes twice a week or more.</p>
+        <h1 class="pagetitle">Batting Cages &amp; Training Facilities Near You</h1>
+        <p class="lede">Find a batting cage or training facility near you — Indianapolis, Fort Wayne, Evansville, South Bend, Elkhart, and everywhere in between. Search by town, filter by area, and check hours before you drive over. Memberships almost always beat walk-in tokens if your player goes twice a week or more.</p>
         <div style="height:16px"></div>
         <div class="searchbar">
+          <input type="search" id="cagesearch" placeholder="Search by town or facility — try “Fort Wayne”, “D-BAT”, “lessons”…" aria-label="Search facilities" />
+          <select id="cagearea" aria-label="Filter by area" style="border:1px solid var(--line);border-radius:8px;padding:9px 12px;background:var(--bg);color:var(--ink);font:inherit;min-height:40px;">
+            <option value="all">All areas</option>
+            <option value="Indianapolis area">Indianapolis area</option>
+            <option value="Fort Wayne">Fort Wayne</option>
+            <option value="Evansville">Evansville</option>
+            <option value="South Bend">South Bend</option>
+            <option value="Elkhart">Elkhart</option>
+            <option value="Statewide">Statewide</option>
+          </select>
           <div class="chips" id="cagechips" role="group" aria-label="Filter facilities by type">
             <button class="chipbtn" type="button" data-kind="all" aria-pressed="true">All facilities</button>
             <button class="chipbtn" type="button" data-kind="cages" aria-pressed="false">Cages &amp; rentals</button>
@@ -321,7 +331,7 @@
         </div>
         <p class="resultcount" id="cagecount"></p>
         <div class="grid" id="cagegrid"></div>
-        <p class="note" style="margin-top:10px;">New Nov 27: D-BAT Zionsville &amp; Evansville, The Bat Cave (Indianapolis), 1st Source Bank Performance Center (South Bend), D-BAT Elkhart and Upper Deck Fort Wayne — 11 facilities listed now. Hours and prices change; confirm with the facility before you drive over.</p>
+        <p class="note" style="margin-top:10px;">20 facilities listed now — Indianapolis area (9), Fort Wayne (6), Evansville, South Bend and Elkhart, plus statewide options. Hours and prices change; confirm with the facility before you drive over.</p>
 
         <section class="block">
           <h2>The winter math</h2>
@@ -341,39 +351,47 @@
     </footer>
     <script>
 /* ---------------- cages ---------------- */
-      var CAGES = [
-        { name: "Grand Park Training Facilities", city: "Westfield", kinds: ["cages","membership"], price: "Memberships & team rentals", 
-          note: "Indoor tunnels and turf at the state's biggest complex — the default winter home for a lot of Indy-area travel programs." },
-        { name: "D-BAT Indianapolis Area", city: "Indianapolis area", kinds: ["cages","lessons","membership"], price: "Tokens, memberships, lessons",
-          note: "The national cage chain's Indiana footprint: pitching machines, private lessons, and monthly memberships that beat token prices fast." },
-        { name: "Pro X Athlete Development", city: "Westfield", kinds: ["cages","lessons"], price: "Rentals & lesson packages",
-          note: "Baseball-first training space known for pitching and hitting instruction, with tunnel rentals for teams." },
-        { name: "D-BAT Zionsville", city: "Indianapolis (Zionsville)", kinds: ["cages","lessons","membership"], price: "Team cages from $30 / half hour",
-          note: "D-BAT's Indy-area academy at 6200 Technology Center Dr, Suite 150 — machine cages, pitching-only tunnels, lessons and memberships. Machine cages are first-come, first-served; call ahead for team blocks." },
-        { name: "The Bat Cave", city: "Indianapolis", kinds: ["cages","lessons"], price: "Walk-in cages & Pro Tunnel",
-          note: "Indoor batting cages at 8734 E 21st St, Indianapolis — Pro Tunnel machines pitch 35–100 mph with curveballs and fastballs. Hitting lessons are held on site. Phone (317) 643-2283." },
-        { name: "D-BAT Evansville", city: "Evansville", kinds: ["cages","lessons","membership"], price: "Cages, lessons & memberships",
-          note: "Nine real-ball cages in a 12,000 sq ft academy at 4505 Ohara Dr, Evansville — private lessons, camps, birthday parties and a Rawlings/Easton pro shop." },
-        { name: "1st Source Bank Performance Center", city: "South Bend", kinds: ["cages","lessons"], price: "Training programs & cage time",
-          note: "Performance center at 525 S Lafayette Blvd, South Bend — individualized training programs for baseball and softball athletes, with cage work built in." },
-        { name: "D-BAT Elkhart", city: "Elkhart", kinds: ["cages","lessons"], price: "Cages & lessons",
-          note: "D-BAT academy at 4411 Wyland Dr, Elkhart — cages and lessons for northern Indiana teams. Confirm hours before driving over." },
-        { name: "Upper Deck Fort Wayne", city: "Fort Wayne", kinds: ["cages"], price: "Cage time",
-          note: "Batting cages at 500 E State Blvd, Fort Wayne — a straightforward cage option for northeast Indiana winter reps." },
-        { name: "Local Rec & School Cages", city: "Statewide", kinds: ["cages"], price: "Often free–$10 / session",
-          note: "The overlooked option: many Indiana high schools and rec departments open their fieldhouse cages in winter. Ask your rec league director first — it's the cheapest hitting in the state." },
-        { name: "Private Hitting Instructors", city: "Statewide", kinds: ["lessons"], price: "$30–$60 / half hour, typical",
-          note: "Former college and high school players coach all over Indiana. One lesson a month plus cage reps beats weekly lessons with no reps — the directory's instructor listings grow from here." }
+            var CAGES = [
+        { name: "Grand Park Sports Campus", city: "Westfield", area: "Indianapolis area", meta: "Westfield · 19000 Grand Park Blvd", kinds: ["cages","membership"], price: "Field & facility rentals", note: "The 400-acre complex is mostly outdoor diamonds, but the Community Health Network Events Center has indoor turf fields for team practice in winter. Field and facility rentals run through the campus — book ahead, because tournament weekends swallow the calendar.", tag: "Westfield · 26 diamonds", link: "http://www.grandpark.org/", linklabel: "Visit site →" },
+        { name: "Pro X Athlete Development", city: "Westfield", area: "Indianapolis area", meta: "Westfield · 651 E 191st St, on the Grand Park campus · Sun 9am–6pm, Mon–Fri 9am–9pm, Sat 9am–6pm · (317) 733-6000", kinds: ["cages","lessons"], price: "Lessons, memberships & cage rentals", note: "The indoor training facility on the Grand Park campus: 65,000 square feet, 22 batting cages, 30,000 square feet of open turf and a high-performance weight room. Private and small-group lessons start with a 3D swing evaluation; memberships include unlimited cage reservations.", tag: "Westfield · 22 cages", link: "https://proxathlete.com/", linklabel: "Visit site →" },
+        { name: "D-BAT Zionsville", city: "Zionsville", area: "Indianapolis area", meta: "Zionsville · 6200 Technology Center Dr, Ste 150 · Mon–Fri 10am–9pm, Sat 10am–6pm, Sun 12–6pm", kinds: ["cages","lessons","membership"], price: "Team cages from $30 / half hour", note: "D-BAT's Indy-area academy: machine cages with real balls, pitching-only tunnels, private lessons and memberships. Team cages from $30 per half hour; machine cages are first-come, first-served, so call ahead for team blocks.", tag: "Northwest side · Team cages", link: "http://www.dbatzionsville.com/", linklabel: "Visit site →" },
+        { name: "D-BAT Avon", city: "Avon", area: "Indianapolis area", meta: "Avon · 7508 Beechwood Centre Rd #700 · Mon–Fri 10am–9pm, Sat 10am–6pm, Sun 12–5pm", kinds: ["cages","lessons","membership"], price: "Cages, lessons & memberships", note: "The west-side D-BAT: climate-controlled machine lanes, pitching lanes, 1:1 lessons for all ages, and a full Rawlings-stocked pro shop. The mirror of Zionsville for families west of I-465.", tag: "West side", link: "https://www.dbatavon.com/", linklabel: "Visit site →" },
+        { name: "The Bat Cave", city: "Indianapolis", area: "Indianapolis area", meta: "Indianapolis · 8734 E 21st St · Sun & Sat 10am–8pm, Mon–Fri 4–8pm · (317) 643-2283", kinds: ["cages","lessons"], price: "Walk-in cages & Pro Tunnel", note: "Nine cages and 15 machines for baseball, slow-pitch and fastpitch softball, plus the Pro Tunnel machines that pitch 35–100 mph with curveballs and fastballs. An official DeMarini and Louisville Slugger dealer with a swing shop on site.", tag: "East side · Walk-in cages", link: "http://www.batcaveindy.com/", linklabel: "Visit site →" },
+        { name: "The Lab Sports Performance", city: "Indianapolis", area: "Indianapolis area", meta: "Indianapolis · 5545 S Meridian St · Mon–Thu 4–9pm as listed · (317) 783-1103", kinds: ["cages","membership"], price: "Tunnel rentals & memberships", note: "The former Extra Innings on the south side, now The Lab: over 24,000 square feet of indoor tunnels, a fully stocked pro shop, a members-only area and a private birthday area. Members get 20% off lessons and rentals, and the facility advertises 24/7 turf access for members.", tag: "South side · 24,000 sq ft", link: "tel:+13177831103", linklabel: "Call (317) 783-1103 →" },
+        { name: "Samp's Hack Shack", city: "Brownsburg", area: "Indianapolis area", meta: "Brownsburg · 486 Southpoint Cir · Mon–Thu 3:30–9pm, Fri 3:30–6:30pm, Sat–Sun 12–3pm · (317) 407-9929", kinds: ["cages","lessons","membership"], price: "Memberships from $30", note: "Opened in 2009 by former big-league pitcher Bill Sampen and his wife Amy: batting tunnels, pitching lanes, private lessons, team rentals and camps for ages 5–13. Memberships start at $30 for unlimited use — the cheapest unlimited winter hitting in the Indy area.", tag: "Brownsburg · Founded 2009", link: "http://www.sampshackshack.com/", linklabel: "Visit site →" },
+        { name: "Raker's Hitting and Pitching", city: "Greenwood", area: "Indianapolis area", meta: "Greenwood · 2650 Fairview Pl, Ste L · Mon–Fri 4–10pm, Sun 9am–9pm · (317) 371-0545", kinds: ["cages","lessons"], price: "Lane rental $20 / hour", note: "A small south-side facility for lane rentals and lessons: lane rental $20 an hour ($10 for 30 minutes), whole-building rental $80 an hour, and hitting or pitching lessons at $30. Best for a parent who wants a lane and a coach, not a crowd.", tag: "Greenwood · $20/hr lanes", link: "https://www.facebook.com/RakersHandP/", linklabel: "Facebook page →" },
+        { name: "Feel Good Hitting", city: "Carmel", area: "Indianapolis area", meta: "Carmel · 409 Industrial Dr · Mon–Fri 3–10pm, Sat 10am–3pm · (619) 905-3051", kinds: ["lessons"], price: "Private & group instruction", note: "A private hitting facility in Carmel: one-on-one, group and team hitting instruction from middle school to the pro level. This is a coaching shop, not a walk-in cage — book a session, don't just show up.", tag: "Carmel · Private instruction", link: "https://www.feelgoodhitting.com/", linklabel: "Visit site →" },
+        { name: "Upper Deck Fort Wayne", city: "Fort Wayne", area: "Fort Wayne", meta: "Fort Wayne · 500 E State Blvd · Daily 8am–10pm · (260) 415-0515", kinds: ["cages"], price: "Cage time", note: "The straightforward cage option in Fort Wayne: walk-in batting cages on State Boulevard, open 8am to 10pm every day. The easiest first stop for winter reps — no membership, no lesson, just swings.", tag: "Walk-in cages", link: "tel:+12604150515", linklabel: "Call (260) 415-0515 →" },
+        { name: "World Baseball Academy", city: "Fort Wayne", area: "Fort Wayne", meta: "Fort Wayne · 1701 Freeman St (ASH Centre) · Mon–Fri 6am–10pm, Sat–Sun 7am–9pm · (260) 436-1507", kinds: ["cages","lessons"], price: "Small-group training $225 / 6 weeks", note: "The 501(c)(3) nonprofit at the ASH Centre: an indoor hitting and pitching lab plus three turf fields outdoors. Small-group training runs in 6-week blocks — hitting and pitching for grades 2–7 at $225 per program as advertised for fall 2026. It also hosts the WBA Summer Hoosier Classic.", tag: "Nonprofit · Indoor lab", link: "http://www.worldbaseballacademy.com/", linklabel: "Visit site →" },
+        { name: "The Diamond Baseball and Softball Academy", city: "Fort Wayne", area: "Fort Wayne", meta: "Fort Wayne · 3203 St Joe Center Rd · Mon–Fri 3:30–9:30pm, Sat 10am–5pm · (260) 471-5790", kinds: ["cages","lessons","membership"], price: "Memberships, lessons & clinics", note: "Fort Wayne's baseball-only indoor facility: 13,000 square feet, nine well-lit tunnels, Hack Attack machines for high-velocity work, a full weight room and individual member access. Home base for the Fort Wayne Diamondbacks and Lady Diamondbacks travel programs, with clinics running through the winter.", tag: "13,000 sq ft · 9 tunnels", link: "http://www.thediamondbaseball.com/", linklabel: "Visit site →" },
+        { name: "Mad Apple Baseball", city: "Fort Wayne", area: "Fort Wayne", meta: "Fort Wayne · 4141 N Clinton St", kinds: ["cages","lessons"], price: "Lessons & lane rentals", note: "Travel teams 8U–17U train year-round at Mad Apple's indoor facility: three hitting lanes, three pitching lanes, a full indoor turf field and a sports-performance weight room. Private pitching, catching and hitting lessons with the Mad Apple coaches, and the facility itself is rentable by the lane.", tag: "North side · 3 hitting lanes", link: "https://www.madapplebaseball.com/", linklabel: "Visit site →" },
+        { name: "Strike Zone Baseball & Athletic Training", city: "Fort Wayne", area: "Fort Wayne", meta: "Fort Wayne · 3054 E State Blvd · (260) 471-7224", kinds: ["cages","lessons"], price: "Team practice area $140 / 90 min", note: "A full-service training center with an indoor grass infield, three dedicated batting cages under near-20-foot nets, pitching lanes for all ages and a strength area. Team practice space is listed at $140 for 90 minutes on its booking page. The old Clinton Street location shows as closed — use the State Boulevard address.", tag: "Indoor grass infield", link: "http://strikezonetraining.net/", linklabel: "Visit site →" },
+        { name: "The Plex North & South", city: "Fort Wayne", area: "Fort Wayne", meta: "Fort Wayne · North: 1807 E California Rd · South: 5702 Engle Rd · (260) 496-9999", kinds: ["cages","lessons"], price: "Cages, lessons & rentals", note: "Fort Wayne's multi-sport complex, two campuses: Plex North has indoor XL turf fields, and Plex South is an indoor turf dome (renovated 2023) with a mini-dome that has indoor batting cages. Baseball and softball batting cages and pitching lessons run alongside the leagues — a good team-practice rental when the tunnels are booked.", tag: "Two campuses · Indoor dome", link: "http://www.plexsports.com/", linklabel: "Visit site →" },
+        { name: "D-BAT Evansville", city: "Evansville", area: "Evansville", meta: "Evansville · 4505 Ohara Dr", kinds: ["cages","lessons","membership"], price: "Cages, lessons & memberships", note: "Nine real-ball cages in a 12,000 sq ft academy at 4505 Ohara Dr, Evansville — private lessons, camps, birthday parties and a Rawlings/Easton pro shop." },
+        { name: "1st Source Bank Performance Center", city: "South Bend", area: "South Bend", meta: "South Bend · 525 S Lafayette Blvd", kinds: ["cages","lessons"], price: "Training programs & cage time", note: "Performance center at 525 S Lafayette Blvd, South Bend — individualized training programs for baseball and softball athletes, with cage work built in." },
+        { name: "D-BAT Elkhart", city: "Elkhart", area: "Elkhart", meta: "Elkhart · 4411 Wyland Dr", kinds: ["cages","lessons"], price: "Cages & lessons", note: "D-BAT academy at 4411 Wyland Dr, Elkhart — cages and lessons for northern Indiana teams. Confirm hours before driving over." },
+        { name: "Local Rec & School Cages", city: "Statewide", area: "Statewide", meta: "Statewide", kinds: ["cages"], price: "Often free–$10 / session", note: "The overlooked option: many Indiana high schools and rec departments open their fieldhouse cages in winter. Ask your rec league director first — it's the cheapest hitting in the state." },
+        { name: "Private Hitting Instructors", city: "Statewide", area: "Statewide", meta: "Statewide", kinds: ["lessons"], price: "$30–$60 / half hour, typical", note: "Former college and high school players coach all over Indiana. One lesson a month plus cage reps beats weekly lessons with no reps — the directory's instructor listings grow from here." },
       ];
-      var cageKind = "all";
+      var cageKind = "all", cageArea = "all", cageQuery = "";
+      function esc(t) { var d = document.createElement("div"); d.textContent = t; return d.innerHTML; }
       function renderCages() {
         var grid = document.getElementById("cagegrid");
-        var list = CAGES.filter(function (c) { return cageKind === "all" || c.kinds.indexOf(cageKind) !== -1; });
+        var list = CAGES.filter(function (c) {
+          var okKind = cageKind === "all" || c.kinds.indexOf(cageKind) !== -1;
+          var okArea = cageArea === "all" || c.area === cageArea;
+          var q = cageQuery;
+          var okQ = !q || (c.name + " " + c.city + " " + (c.meta || "") + " " + c.note).toLowerCase().indexOf(q) !== -1;
+          return okKind && okArea && okQ;
+        });
         document.getElementById("cagecount").textContent = list.length + (list.length === 1 ? " listing" : " listings");
         grid.innerHTML = list.map(function (c) {
-          return '<article class="card"><h3>' + c.name + '</h3><p class="meta">' + c.city + '</p>' +
-            '<p class="note">' + c.note + '</p><div class="cardfoot"><span class="fee">' + c.price + '</span></div></article>';
-        }).join("") || '<div class="empty">No facilities in that category yet.</div>';
+          return '<article class="card">' + (c.tag ? '<div><span class="tag red">' + esc(c.tag) + '</span></div>' : '') +
+            '<h3>' + esc(c.name) + '</h3><p class="meta">' + esc(c.meta || c.city) + '</p>' +
+            '<p class="note">' + esc(c.note) + '</p><div class="cardfoot"><span class="fee">' + esc(c.price) + '</span>' +
+            (c.link ? '<a class="afflink" href="' + c.link + '" target="_blank" rel="noopener">' + esc(c.linklabel || "Visit site →") + '</a>' : '') +
+            '</div></article>';
+        }).join("") || '<div class="empty">No facilities match that search yet — try a nearby town or a different area.</div>';
       }
       document.getElementById("cagechips").addEventListener("click", function (e) {
         var b = e.target.closest("[data-kind]"); if (!b) return;
@@ -381,6 +399,8 @@
         this.querySelectorAll(".chipbtn").forEach(function (c) { c.setAttribute("aria-pressed", c === b ? "true" : "false"); });
         renderCages();
       });
+      document.getElementById("cagesearch").addEventListener("input", function () { cageQuery = this.value.trim().toLowerCase(); renderCages(); });
+      document.getElementById("cagearea").addEventListener("change", function () { cageArea = this.value; renderCages(); });
       renderCages();
     </script>
   

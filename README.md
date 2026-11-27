@@ -12,8 +12,8 @@ team coach-eric, project `hoosier-diamond-directory`).
 - `tournaments-10u.html` — Indiana 10U Tournaments 2027 (28 listings)
 - `tournaments-12u.html` — Indiana 12U Tournaments 2027 (30 listings)
 - `cages.html` — Batting Cages & Training in Indiana (11 listings, type filter)
-- `cages-indianapolis.html` — Batting Cages Near Indianapolis (9 facilities)
-- `cages-fort-wayne.html` — Batting Cages Near Fort Wayne (6 facilities)
+- `cages.html` — Batting Cages Near Indianapolis (9 facilities)
+- `cages.html` — Batting Cages Near Fort Wayne (6 facilities)
 - `bats.html` — Best Youth Bats by Age · `bat-sizing.html` — Bat Sizing Guide
 - `gloves.html` — Best Gloves (size by age & position)
 - `best-bat-10u.html` — Best Bat for 10U · `best-glove-10u.html` — Best Glove for 10U
