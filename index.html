@@ -289,6 +289,29 @@
         header.site.nav-open nav.pages { display: flex; }
         nav.pages a { justify-content: flex-start; }
       }
+    
+      /* ---------- redesign pass, Nov 27: cleaner cards, tiles, spacing ---------- */
+      .tile { transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+      .tile:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--red); }
+      .tile .eyebrow { font-size: .72rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; color: var(--red-ink); display: block; margin-bottom: 6px; }
+      .tile .meta { font-size: .78rem; color: var(--muted); display: block; margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--line); }
+      .hero { margin-bottom: 16px; }
+      section.block { margin-top: 28px; }
+      .card { transition: border-color .15s ease; }
+      .card:hover { border-color: var(--red); }
+      .quicklinks { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 0 0 20px; font-size: .88rem; color: var(--muted); }
+      .quicklinks span { font-weight: 700; }
+      .quicklinks a { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 6px 12px; font-weight: 700; text-decoration: none; min-height: 36px; display: inline-flex; align-items: center; }
+      .quicklinks a:hover { border-color: var(--red); color: var(--red-ink); }
+      .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 26px 0 4px; }
+      .stats > div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 10px; text-align: center; }
+      .stats strong { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.6rem; font-weight: 900; color: var(--navy); }
+      .stats span { font-size: .82rem; color: var(--muted); font-weight: 700; }
+      .golinks { font-size: 1rem; line-height: 2.1; }
+      .golinks a { font-weight: 700; }
+      .hero .searchbar { margin: 14px 0 0; }
+      .hero .searchbar input[type="search"] { background: #fff; }
+      @media (max-width: 560px) { .stats { grid-template-columns: repeat(2, 1fr); } }
     </style>
   </head>
   <body>
@@ -312,12 +335,21 @@
           <div class="overlay">
             <h1>Every youth baseball answer in Indiana, in one place.</h1>
             <p>Tournaments worth the drive, cages worth the money, gear that fits the rules — written for parents, not marketers.</p>
-          </div>
-        </div>
-
         <div class="searchbar" role="search">
           <input type="search" id="homesearch" placeholder="Search the directory — try “bats”, “Player Pool”, “cost”…" aria-label="Search the directory" />
           <button class="btn" id="homesearchbtn" type="button">Search</button>
+        </div>
+          </div>
+        </div>
+
+        <div class="quicklinks" aria-label="Popular searches">
+          <span>Popular:</span>
+          <a href="best-bat-10u.html">Best bat 10U</a>
+          <a href="bat-sizing.html">Bat sizing</a>
+          <a href="cages.html">Cages near me</a>
+          <a href="rec-leagues.html">Rec leagues</a>
+          <a href="costs-indiana.html">Travel costs</a>
+          <a href="first-season.html">First season</a>
         </div>
         <div id="searchresults"></div>
 
@@ -336,7 +368,15 @@
           <h2>Featured gear guides</h2>
           <p class="sub">The buying guides parents ask for most — bats, gloves, cleats, and the training gear that actually gets used. Everything else on the site is one search away, or in the menu above.</p>
           <div class="tiles" id="hometiles"></div>
+          <p class="golinks">More guides: <a href="first-season.html">First Season</a> &middot; <a href="rec-leagues.html">Rec Leagues</a> &middot; <a href="costs-indiana.html">Cost in Indiana</a> &middot; <a href="questions.html">Team Questions</a> &middot; <a href="bat-rules.html">Bat Rules</a> &middot; <a href="tournaments.html">Tournaments</a> &middot; <a href="cages.html">Cages Near Me</a> &middot; <a href="player-pool.html">Player Pool</a> &middot; <a href="how.html">How It Works</a></p>
         </section>
+
+        <div class="stats" aria-label="Directory at a glance">
+          <div><strong>117</strong><span>rec leagues</span></div>
+          <div><strong>40</strong><span>counties covered</span></div>
+          <div><strong>20</strong><span>cages &amp; facilities</span></div>
+          <div><strong>22</strong><span>2027 tournaments</span></div>
+        </div>
 
         <section class="block">
           <h2>Start with the pages parents actually search for</h2>
@@ -393,14 +433,24 @@
       ];
       var tiles = document.getElementById("hometiles");
       var FEATURED = ["bats", "gloves", "best-cleats", "training-tools", "best-training-bat", "bat-sizing"];
+      var FMETA = {
+        "bats": { eyebrow: "Bats", meta: "Ages 7\u201314 \u00b7 10 guides \u00b7 Updated Nov 2026" },
+        "gloves": { eyebrow: "Gloves", meta: "Ages 4\u201314 \u00b7 Updated Nov 2026" },
+        "best-cleats": { eyebrow: "Cleats", meta: "Molded & metal \u00b7 Updated Nov 2026" },
+        "training-tools": { eyebrow: "Training", meta: "Tees, nets & trainers \u00b7 Updated Nov 2026" },
+        "best-training-bat": { eyebrow: "Training", meta: "CamWood vs Axe \u00b7 Updated Nov 2026" },
+        "bat-sizing": { eyebrow: "Sizing", meta: "Ages 7\u201314 \u00b7 Updated Nov 2026" }
+      };
       FEATURED.forEach(function (id) {
         var p = PAGES.filter(function (x) { return x.id === id; })[0];
         if (!p) return;
         var a = document.createElement("a");
         a.className = "tile"; a.href = p.url;
-        a.innerHTML = '<span class="n">Featured</span><span class="t"></span><span class="d"></span>';
-        a.querySelector(".t").textContent = p.title;
+        a.innerHTML = '<span class="eyebrow"></span><span class="t"></span><span class="d"></span><span class="meta"></span>';
+        a.querySelector(".eyebrow").textContent = FMETA[id].eyebrow;
+        a.querySelector(".t").textContent = p.title.replace(" | Hoosier Diamond Directory", "");
         a.querySelector(".d").textContent = p.blurb;
+        a.querySelector(".meta").textContent = FMETA[id].meta;
         tiles.appendChild(a);
       });
       /* old hash links (#gloves etc.) redirect to the real page */
@@ -428,7 +478,7 @@
           var a = document.createElement("a");
           a.className = "tile"; a.href = p.url;
           a.innerHTML = '<span class="t"></span><span class="d"></span>';
-          a.querySelector(".t").textContent = p.title;
+          a.querySelector(".t").textContent = p.title.replace(" | Hoosier Diamond Directory", "");
           a.querySelector(".d").textContent = p.blurb;
           wrap.appendChild(a);
         });

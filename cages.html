@@ -289,6 +289,29 @@
         header.site.nav-open nav.pages { display: flex; }
         nav.pages a { justify-content: flex-start; }
       }
+    
+      /* ---------- redesign pass, Nov 27: cleaner cards, tiles, spacing ---------- */
+      .tile { transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+      .tile:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--red); }
+      .tile .eyebrow { font-size: .72rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; color: var(--red-ink); display: block; margin-bottom: 6px; }
+      .tile .meta { font-size: .78rem; color: var(--muted); display: block; margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--line); }
+      .hero { margin-bottom: 16px; }
+      section.block { margin-top: 28px; }
+      .card { transition: border-color .15s ease; }
+      .card:hover { border-color: var(--red); }
+      .quicklinks { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 0 0 20px; font-size: .88rem; color: var(--muted); }
+      .quicklinks span { font-weight: 700; }
+      .quicklinks a { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 6px 12px; font-weight: 700; text-decoration: none; min-height: 36px; display: inline-flex; align-items: center; }
+      .quicklinks a:hover { border-color: var(--red); color: var(--red-ink); }
+      .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 26px 0 4px; }
+      .stats > div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 10px; text-align: center; }
+      .stats strong { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.6rem; font-weight: 900; color: var(--navy); }
+      .stats span { font-size: .82rem; color: var(--muted); font-weight: 700; }
+      .golinks { font-size: 1rem; line-height: 2.1; }
+      .golinks a { font-weight: 700; }
+      .hero .searchbar { margin: 14px 0 0; }
+      .hero .searchbar input[type="search"] { background: #fff; }
+      @media (max-width: 560px) { .stats { grid-template-columns: repeat(2, 1fr); } }
     </style>
   </head>
   <body>
@@ -322,6 +345,7 @@
             <option value="Goshen">Goshen</option>
             <option value="Statewide">Statewide</option>
           </select>
+          <button class="btn ghost" type="button" id="cageclear">Clear filters</button>
           <div class="chips" id="cagechips" role="group" aria-label="Filter facilities by type">
             <button class="chipbtn" type="button" data-kind="all" aria-pressed="true">All facilities</button>
             <button class="chipbtn" type="button" data-kind="cages" aria-pressed="false">Cages &amp; rentals</button>
@@ -401,6 +425,13 @@
       });
       document.getElementById("cagesearch").addEventListener("input", function () { cageQuery = this.value.trim().toLowerCase(); renderCages(); });
       document.getElementById("cagearea").addEventListener("change", function () { cageArea = this.value; renderCages(); });
+      document.getElementById("cageclear").addEventListener("click", function () {
+        cageKind = "all"; cageArea = "all"; cageQuery = "";
+        document.getElementById("cagesearch").value = "";
+        document.getElementById("cagearea").value = "all";
+        document.querySelectorAll("#cagechips .chipbtn").forEach(function (c) { c.setAttribute("aria-pressed", c.dataset.kind === "all" ? "true" : "false"); });
+        renderCages();
+      });
       renderCages();
     </script>
   

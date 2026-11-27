@@ -289,6 +289,29 @@
         header.site.nav-open nav.pages { display: flex; }
         nav.pages a { justify-content: flex-start; }
       }
+    
+      /* ---------- redesign pass, Nov 27: cleaner cards, tiles, spacing ---------- */
+      .tile { transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+      .tile:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--red); }
+      .tile .eyebrow { font-size: .72rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; color: var(--red-ink); display: block; margin-bottom: 6px; }
+      .tile .meta { font-size: .78rem; color: var(--muted); display: block; margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--line); }
+      .hero { margin-bottom: 16px; }
+      section.block { margin-top: 28px; }
+      .card { transition: border-color .15s ease; }
+      .card:hover { border-color: var(--red); }
+      .quicklinks { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 0 0 20px; font-size: .88rem; color: var(--muted); }
+      .quicklinks span { font-weight: 700; }
+      .quicklinks a { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 6px 12px; font-weight: 700; text-decoration: none; min-height: 36px; display: inline-flex; align-items: center; }
+      .quicklinks a:hover { border-color: var(--red); color: var(--red-ink); }
+      .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 26px 0 4px; }
+      .stats > div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 10px; text-align: center; }
+      .stats strong { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.6rem; font-weight: 900; color: var(--navy); }
+      .stats span { font-size: .82rem; color: var(--muted); font-weight: 700; }
+      .golinks { font-size: 1rem; line-height: 2.1; }
+      .golinks a { font-weight: 700; }
+      .hero .searchbar { margin: 14px 0 0; }
+      .hero .searchbar input[type="search"] { background: #fff; }
+      @media (max-width: 560px) { .stats { grid-template-columns: repeat(2, 1fr); } }
     </style>
   </head>
   <body>
@@ -314,6 +337,18 @@
         <section class="block">
           <h2>All the bat guides</h2>
           <p class="sub">Everything bat-related on this site, in one place. Start here, then jump to the page that fits your player.</p>
+          <h3>Quick start: what to buy by age</h3>
+          <table class="costs">
+            <thead><tr><th>Age</th><th>Drop</th><th>Typical price</th></tr></thead>
+            <tbody>
+              <tr><td>7</td><td>-12</td><td class="amt">~$51&ndash;$76</td></tr>
+              <tr><td>8</td><td>-11</td><td class="amt">~$51&ndash;$76</td></tr>
+              <tr><td>9</td><td>-10 to -11</td><td class="amt">~$51&ndash;$110</td></tr>
+              <tr><td>10U (ages 9&ndash;10)</td><td>-10</td><td class="amt">~$112&ndash;$350</td></tr>
+              <tr><td>12U (ages 11&ndash;12)</td><td>-8</td><td class="amt">~$150&ndash;$400</td></tr>
+            </tbody>
+          </table>
+          <p class="affnote">Drops and prices as listed on each guide, Nov 2026 &mdash; confirm the stamp with your league before buying.</p>
           <h3>Best by age</h3>
           <ul>
             <li><a href="best-bat-10u.html">Best Bat 10U</a> — the top bats for 10U players, USSSA and USA.</li>
