@@ -301,7 +301,7 @@
           <div class="brandname">Hoosier Diamond <span>Directory</span></div>
           <div class="brandsub">Youth baseball in Indiana — tournaments,<br />training, gear &amp; straight answers</div>
         </div>
-        <nav class="pages" id="topnav" aria-label="Directory pages"><a href="index.html" aria-current="page">Home</a><a href="tournaments.html">Tournaments</a><a href="player-pool.html">Player Pool</a><a href="cages.html">Cages</a><a href="bats.html">Best Bats</a><a href="best-bat-10u.html">Best Bat 10U</a><a href="bat-sizing.html">Bat Sizing</a><a href="training-tools.html">Training Tools</a><a href="gloves.html">Best Gloves</a><a href="best-glove-10u.html">Best Glove 10U</a><a href="cleats.html">Starter Kit</a><a href="first-season.html">First Season</a><a href="bat-rules.html">Bat Rules</a><a href="questions.html">Team Questions</a><a href="how.html">How It Works</a></nav>
+        <nav class="pages" id="topnav" aria-label="Directory pages"><a href="index.html" aria-current="page">Home</a><a href="tournaments.html">Tournaments</a><a href="player-pool.html">Player Pool</a><a href="cages.html">Cages</a><a href="bats.html">Best Bats</a><a href="best-bat-10u.html">Best Bat 10U</a><a href="best-bat-12u.html">Best Bat 12U</a><a href="bat-sizing.html">Bat Sizing</a><a href="bat-size-7-year-old.html">Bat Size Age 7</a><a href="training-tools.html">Training Tools</a><a href="gloves.html">Best Gloves</a><a href="best-glove-10u.html">Best Glove 10U</a><a href="cleats.html">Starter Kit</a><a href="first-season.html">First Season</a><a href="bat-rules.html">Bat Rules</a><a href="questions.html">Team Questions</a><a href="how.html">How It Works</a></nav>
       </div>
     </header>
 
@@ -350,7 +350,7 @@
 
 <footer class="site">
       <div class="wrap">
-        <span>Hoosier Diamond Directory — now with Covington 2027, more Indiana tournaments, Player Pool, the glove and bat sizing guides, training tools, and new Best Bat / Best Glove for 10U picks.</span>
+        <span>Hoosier Diamond Directory — now with Covington 2027, more Indiana tournaments, Player Pool, the glove and bat sizing guides, training tools, and new Best Bat for 10U and 12U, Best Glove for 10U, and Bat Size for a 7-Year-Old picks.</span>
         <span>Contact: <a href="mailto:hoosierdiamonddirector@gmail.com">hoosierdiamonddirector@gmail.com</a> · <a href="https://player-pool.net/" target="_blank" rel="noopener">player-pool.net</a> · <a href="privacy.html">Privacy Policy</a> · <a href="disclosure.html">Affiliate Disclosure</a></span>
         <span>Listings &amp; prices are typical ranges unless a host fee is shown, verified before anything goes public.</span>
       </div>
@@ -364,7 +364,9 @@
         { id: "cages", url: "cages.html", label: "Cages", title: "Batting Cages & Training in Indiana | Hoosier Diamond Directory", blurb: "Indoor batting cages, lessons and memberships across Indiana for the winter months.", keys: "cages" },
         { id: "bats", url: "bats.html", label: "Best Bats", title: "Best Youth Baseball Bats by Age (2026–27) | Hoosier Diamond Directory", blurb: "Youth bat picks split by USSSA and USA Baseball, sized by age — with retailer links.", keys: "bats" },
         { id: "best-bat-10u", url: "best-bat-10u.html", label: "Best Bat 10U", title: "Best Bat for 10U (2026–27): USSSA & USA Picks | Hoosier Diamond Directory", blurb: "The best bats for 10U players, ages 9–10: USSSA and USA picks, drop -10 sizing, prices, and which bats to skip.", keys: "best-bat-10u" },
+        { id: "best-bat-12u", url: "best-bat-12u.html", label: "Best Bat 12U", title: "Best Bat for 12U (2026–27): USSSA & USA Picks | Hoosier Diamond Directory", blurb: "The best bats for 12U players, ages 11–12: USSSA -8 and USA -10 picks, 30–31 inch sizing, and the 13U drop rule ahead.", keys: "best-bat-12u" },
         { id: "bat-sizing", url: "bat-sizing.html", label: "Bat Sizing", title: "Youth Bat Sizing Guide: Length, Drop & Stamp by Age | Hoosier Diamond Directory", blurb: "Size a youth bat by age and height, understand drop weight, and pick the right USSSA, USA or BBCOR stamp.", keys: "bat-sizing" },
+        { id: "bat-size-7-year-old", url: "bat-size-7-year-old.html", label: "Bat Size Age 7", title: "What Size Bat for a 7-Year-Old? 27–28 Inches, Drop -12 | Hoosier Diamond Directory", blurb: "What size bat for a 7 year old: 27–28 inches at drop -12 for most, with a height and weight chart, fit tests, and budget picks.", keys: "bat-size-7-year-old" },
         { id: "training-tools", url: "training-tools.html", label: "Training Tools", title: "Youth Baseball Training Tools: Tees, Training Bats & Nets | Hoosier Diamond Directory", blurb: "The home training setup that actually gets used — batting tee, training bat, net and practice balls, with prices.", keys: "training-tools" },
         { id: "gloves", url: "gloves.html", label: "Best Gloves", title: "Best Youth Baseball Gloves: Size by Age & Position | Hoosier Diamond Directory", blurb: "Youth glove size chart by age (4–14), infield vs outfield vs first-base and catcher's mitts — with retailer links.", keys: "gloves" },
         { id: "best-glove-10u", url: "best-glove-10u.html", label: "Best Glove 10U", title: "Best Baseball Glove for 10U: Size, Picks by Position | Hoosier Diamond Directory", blurb: "The best baseball glove for a 10 year old is 11 to 11.5 inches — picks by position, prices, and the throwing-hand check.", keys: "best-glove-10u" },
@@ -378,7 +380,7 @@
         { id: "disclosure", url: "disclosure.html", label: "None", title: "Affiliate Disclosure | Hoosier Diamond Directory", blurb: "How Hoosier Diamond Directory earns from gear links — and what it does not earn yet.", keys: "disclosure" }
       ];
       var tiles = document.getElementById("hometiles");
-      var tileTotal = 14;
+      var tileTotal = 16;
       PAGES.forEach(function (p, i) {
         if (["home","how","privacy","disclosure"].indexOf(p.id) !== -1) return;
         var n = tiles.querySelectorAll(".tile").length + 1;
