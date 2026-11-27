@@ -21,6 +21,8 @@ team coach-eric, project `hoosier-diamond-directory`).
 - `cleats.html` — Cleats & First-Season Starter Kit · `first-season.html`
 - `bat-rules.html` — USSSA vs USA · `questions.html` — 12 Team Questions
 - `player-pool.html` — Player Pool (player-pool.net) · `costs.html` — True Cost
+- `costs-indiana.html` — How Much Does Travel Baseball Cost in Indiana? 2027, per age (8U/10U/12U/14U)
+- `best-training-bat.html` — Best Training Bat for Youth (CamWood vs Axe vs overload/underload)
 - `how.html` — How It Works (outreach approval queue) · `privacy.html` · `disclosure.html`
 - `sitemap.xml` + `robots.txt`
 
