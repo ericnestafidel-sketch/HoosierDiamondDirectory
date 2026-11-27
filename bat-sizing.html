@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>Youth Bat Sizing Guide: Length, Drop &amp; Stamp by Age | Hoosier Diamond Directory</title>
+    <meta name="description" content="Size a youth bat by age and height, understand drop weight, and pick the right USSSA, USA or BBCOR stamp." />
+    <link rel="canonical" href="https://hoosier-diamond-directory.vercel.app/bat-sizing.html" />
+    <meta property="og:title" content="Youth Bat Sizing Guide: Length, Drop &amp; Stamp by Age | Hoosier Diamond Directory" />
+    <meta property="og:description" content="Size a youth bat by age and height, understand drop weight, and pick the right USSSA, USA or BBCOR stamp." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hoosier-diamond-directory.vercel.app/bat-sizing.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,900&family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <script defer src="/_vercel/insights/script.js"></script>
+    <style>
+      button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]) { min-height: 2rem; }
+      * { box-sizing: border-box; }
+      :root {
+        --bg: #f5f1e8;
+        --surface: #fffdf7;
+        --surface2: #efe9da;
+        --ink: #1d2534;
+        --muted: #5a6373;
+        --line: #ddd3bd;
+        --navy: #152a44;
+        --navy2: #0e1e33;
+        --red: #b23a26;
+        --red-ink: #9c3220;
+        --gold: #c08a1e;
+        --chip: #ece4cf;
+        --ok: #2e6b34;
+        --okbg: #e2efdd;
+        --warnbg: #f7ecd2;
+        --shadow: 0 10px 28px rgba(21, 42, 68, .12);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0f141c;
+          --surface: #171f2b;
+          --surface2: #1d2735;
+          --ink: #ede8db;
+          --muted: #a6adbb;
+          --line: #2d3747;
+          --navy: #0b1624;
+          --navy2: #081120;
+          --red: #e0684c;
+          --red-ink: #eda08c;
+          --gold: #d9a94f;
+          --chip: #232e3f;
+          --ok: #8fce97;
+          --okbg: #1e3320;
+          --warnbg: #38300f;
+          --shadow: 0 10px 28px rgba(0, 0, 0, .45);
+        }
+      }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Public Sans", system-ui, -apple-system, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+      h1, h2, h3 { font-family: "Fraunces", Georgia, serif; line-height: 1.12; margin: 0; }
+      p { margin: 0; }
+      a { color: var(--red-ink); }
+      button { font: inherit; cursor: pointer; }
+      .wrap { max-width: 1060px; margin: 0 auto; padding: 0 18px; }
+
+      /* ---------- header / nav ---------- */
+      header.site {
+        background: linear-gradient(180deg, var(--navy), var(--navy2));
+        color: #f3efe3;
+        position: sticky; top: 0; z-index: 40;
+        box-shadow: 0 2px 14px rgba(0,0,0,.25);
+      }
+      .brandrow { display: flex; align-items: center; gap: 12px; padding: 12px 0 4px; flex-wrap: wrap; }
+      .ball {
+        width: 38px; height: 38px; border-radius: 50%; flex: none;
+        background: #f7f3e8; position: relative;
+        box-shadow: inset 0 0 0 2px rgba(21,42,68,.15);
+      }
+      .ball::before, .ball::after {
+        content: ""; position: absolute; top: 4px; bottom: 4px; width: 12px;
+        border: 2px dashed #b23a26; border-radius: 50%;
+      }
+      .ball::before { left: 2px; border-right: none; }
+      .ball::after { right: 2px; border-left: none; }
+      .brandname { font-family: "Fraunces", Georgia, serif; font-weight: 900; font-size: 1.28rem; letter-spacing: .01em; }
+      .brandname span { color: #e8b23a; }
+      .brandname span.drafttag { color: #231a04; }
+      .brandsub { font-size: .78rem; color: #c9d2de; margin-left: auto; text-align: right; }
+      .drafttag {
+        display: inline-block; background: #e8b23a; color: #231a04; font-weight: 800;
+        font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; line-height: 1.5;
+        padding: 3px 10px; border-radius: 999px; vertical-align: 3px; margin-left: 8px;
+      }
+      nav.pages { display: flex; gap: 2px; flex-wrap: wrap; padding: 8px 0 10px; }
+      nav.pages::-webkit-scrollbar { display: none; }
+      nav.pages button {
+        flex: none; background: transparent; border: 1px solid transparent; color: #dbe2ec;
+        padding: 7px 12px; border-radius: 999px; font-size: .86rem; font-weight: 600; min-height: 36px;
+        white-space: nowrap;
+      }
+      nav.pages button:hover { background: rgba(255,255,255,.1); color: #fff; }
+      nav.pages button[aria-current="page"] { background: #f3efe3; color: #152a44; }
+
+      /* ---------- pages ---------- */
+      .page { display: none; padding: 26px 0 54px; }
+      .page.active { display: block; }
+      .pagetitle { font-size: clamp(1.7rem, 4.5vw, 2.5rem); font-weight: 900; margin-bottom: 8px; }
+      .lede { color: var(--muted); max-width: 62ch; font-size: 1.02rem; }
+      .crumb { font-size: .78rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--red-ink); margin-bottom: 10px; }
+
+      /* ---------- hero ---------- */
+      .hero { position: relative; border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); margin-bottom: 22px; }
+      .hero img { display: block; width: 100%; height: clamp(210px, 38vw, 340px); object-fit: cover; }
+      .hero .overlay {
+        position: absolute; inset: auto 0 0 0; padding: 20px 22px;
+        background: linear-gradient(180deg, transparent, rgba(9, 20, 36, .88) 55%);
+        color: #f6f2e6;
+      }
+      .hero h1 { font-size: clamp(1.65rem, 5vw, 2.6rem); font-weight: 900; max-width: 18ch; }
+      .hero p { color: #d8dee8; max-width: 56ch; margin-top: 6px; font-size: .98rem; }
+
+      /* ---------- search & filters ---------- */
+      .searchbar {
+        display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+        background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+        padding: 12px; box-shadow: var(--shadow); margin-bottom: 20px;
+      }
+      .searchbar input[type="search"] {
+        flex: 1 1 220px; border: 1px solid var(--line); border-radius: 8px; padding: 9px 12px;
+        background: var(--bg); color: var(--ink); font: inherit; min-height: 40px;
+      }
+      .chips { display: flex; gap: 6px; flex-wrap: wrap; }
+      .chipbtn {
+        border: 1px solid var(--line); background: var(--chip); color: var(--ink);
+        border-radius: 999px; padding: 6px 13px; font-size: .84rem; font-weight: 700; min-height: 36px;
+      }
+      .chipbtn[aria-pressed="true"] { background: var(--navy); color: #f3efe3; border-color: var(--navy); }
+      @media (prefers-color-scheme: dark) { .chipbtn[aria-pressed="true"] { background: #e8b23a; color: #231a04; border-color: #e8b23a; } }
+      .resultcount { font-size: .85rem; color: var(--muted); margin: 0 0 12px; }
+
+      /* ---------- cards ---------- */
+      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+        padding: 16px 16px 14px; display: flex; flex-direction: column; gap: 8px;
+      }
+      .card h3 { font-size: 1.12rem; font-weight: 600; }
+      .card .meta { font-size: .86rem; color: var(--muted); }
+      .card .note { font-size: .92rem; }
+      .cardfoot { margin-top: auto; padding-top: 8px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+      .fee { font-weight: 800; }
+      .tag {
+        font-size: .7rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+        background: var(--chip); border-radius: 5px; padding: 3px 7px; color: var(--ink);
+      }
+      .tag.red { background: var(--red); color: #fff; }
+      .afflink { font-weight: 700; font-size: .9rem; }
+      .affnote { font-size: .72rem; color: var(--muted); }
+
+      .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(225px, 1fr)); gap: 12px; margin: 18px 0 8px; }
+      .tile {
+        text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+        padding: 16px; color: var(--ink); display: block; width: 100%;
+      }
+      .tile:hover { border-color: var(--red); }
+      .tile .t { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 1.08rem; display: block; margin-bottom: 4px; }
+      .tile .d { font-size: .87rem; color: var(--muted); display: block; }
+      .tile .n { font-size: .72rem; font-weight: 800; color: var(--red-ink); letter-spacing: .07em; text-transform: uppercase; display: block; margin-bottom: 6px; }
+
+      section.block { margin-top: 34px; }
+      section.block > h2 { font-size: 1.45rem; font-weight: 900; margin-bottom: 6px; }
+      section.block > .sub { color: var(--muted); max-width: 64ch; margin-bottom: 14px; }
+
+      /* ---------- steps / how it works ---------- */
+      .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; counter-reset: step; }
+      .step { background: var(--surface2); border-radius: 12px; padding: 16px; }
+      .step .num {
+        counter-increment: step; font-family: "Fraunces", Georgia, serif; font-weight: 900;
+        font-size: 1.5rem; color: var(--red-ink); display: block; margin-bottom: 4px;
+      }
+      .step .num::before { content: counter(step, decimal-leading-zero); }
+      .step h3 { font-size: 1rem; margin-bottom: 4px; }
+      .step p { font-size: .88rem; color: var(--muted); }
+
+      .queue { display: flex; flex-direction: column; gap: 12px; }
+      .qcard { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+      .qcard h3 { font-size: 1.02rem; font-family: "Public Sans", sans-serif; font-weight: 800; }
+      .qcard .to { font-size: .85rem; color: var(--muted); margin: 2px 0 8px; }
+      .qcard .body { font-size: .92rem; background: var(--bg); border: 1px dashed var(--line); border-radius: 8px; padding: 10px 12px; }
+      .qactions { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; align-items: center; }
+      .btn {
+        border-radius: 8px; padding: 8px 16px; font-weight: 800; font-size: .9rem; min-height: 40px;
+        border: 1px solid var(--navy); background: var(--navy); color: #f3efe3;
+      }
+      .btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+      .btn:disabled { opacity: .45; cursor: default; }
+      .status { font-size: .85rem; font-weight: 700; }
+      .status.ok { color: var(--ok); }
+      .status.hold { color: var(--gold); }
+      .gatebar {
+        display: flex; gap: 10px; align-items: flex-start; background: var(--warnbg);
+        border-radius: 10px; padding: 12px 14px; font-size: .92rem; margin-bottom: 16px;
+      }
+      .gatebar strong { white-space: nowrap; }
+
+      /* ---------- gear & guides ---------- */
+      .gearhero { border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); margin-bottom: 20px; }
+      .gearhero img { display: block; width: 100%; height: clamp(180px, 30vw, 260px); object-fit: cover; }
+      .pick { border-top: 3px solid var(--red); }
+      .pick .why { font-size: .92rem; }
+      .pick .price { font-size: 1.05rem; font-weight: 800; }
+      .prose { max-width: 68ch; }
+      .prose h2 { font-size: 1.35rem; font-weight: 900; margin: 26px 0 8px; }
+      .prose h2:first-child { margin-top: 0; }
+      .prose p { margin-bottom: 12px; }
+      .prose ul { margin: 0 0 12px; padding-left: 20px; }
+      .prose li { margin-bottom: 6px; }
+      .callout { background: var(--surface2); border-radius: 10px; padding: 14px 16px; margin: 16px 0; font-size: .95rem; }
+      .callout strong { display: block; margin-bottom: 3px; }
+
+      table.costs { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; font-size: .94rem; }
+      table.costs th, table.costs td { padding: 11px 13px; text-align: left; vertical-align: top; }
+      table.costs thead th { background: var(--navy); color: #f3efe3; font-family: "Public Sans", sans-serif; font-size: .82rem; letter-spacing: .05em; text-transform: uppercase; }
+      table.costs tbody tr + tr td { border-top: 1px solid var(--line); }
+      table.costs td.amt { font-weight: 800; white-space: nowrap; }
+      @media (max-width: 560px) {
+        table.costs td.amt { white-space: normal; }
+        .brandsub { display: none; }
+        .hero img { height: 150px; }
+        .hero .overlay { position: static; background: var(--navy2); padding: 16px 18px 18px; }
+        .hero h1 { font-size: 1.5rem; }
+      }
+
+      /* ---------- featured / spotlight ---------- */
+      .feature {
+        background: linear-gradient(135deg, var(--navy), var(--navy2)); color: #f3efe3;
+        border-radius: 14px; padding: 20px 22px; box-shadow: var(--shadow); margin: 0 0 20px;
+        display: flex; gap: 18px; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      }
+      .feature h2 { font-size: 1.45rem; font-weight: 900; margin-bottom: 6px; }
+      .feature p { color: #d8dee8; max-width: 58ch; font-size: .96rem; }
+      .feature .cta { display: flex; gap: 8px; flex-wrap: wrap; flex: none; }
+      .feature .btn.light { background: #e8b23a; border-color: #e8b23a; color: #231a04; }
+      .feature .btn.outline { background: transparent; border-color: rgba(255,255,255,.45); color: #f3efe3; }
+      .spotlight { background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--gold); border-radius: 12px; padding: 18px; }
+      .spotlight h3 { font-size: 1.2rem; margin-bottom: 6px; }
+      .datelist { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px; margin: 14px 0 6px; }
+      .dateitem { background: var(--surface2); border-radius: 10px; padding: 12px 14px; }
+      .dateitem strong { display: block; font-size: .98rem; }
+      .dateitem span { font-size: .84rem; color: var(--muted); }
+      .twocol { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+
+      /* ---------- glove sizing & positions ---------- */
+      .agegrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+      .agecard { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 15px; }
+      .agecard .age { font-family: "Fraunces", Georgia, serif; font-weight: 900; font-size: 1.18rem; display: block; }
+      .agecard .level { font-size: .74rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--red-ink); display: block; margin-bottom: 8px; }
+      .agecard dl { margin: 0; font-size: .88rem; }
+      .agecard dl div { display: flex; justify-content: space-between; gap: 10px; padding: 4px 0; border-top: 1px solid var(--line); }
+      .agecard dt { color: var(--muted); }
+      .agecard dd { margin: 0; font-weight: 800; text-align: right; white-space: nowrap; }
+      .agecard .tip { font-size: .84rem; color: var(--muted); margin-top: 9px; }
+      .posgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+      .poscard { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+      .poscard h3 { font-size: 1.12rem; font-weight: 600; }
+      .poscard .spec { font-size: .84rem; font-weight: 700; color: var(--ink); background: var(--surface2); border-radius: 8px; padding: 8px 10px; }
+      .poscard p { font-size: .92rem; }
+      .poscard .buy { font-size: .9rem; }
+      .poscard .buy strong { color: var(--ok); }
+      .poscard .skip strong { color: var(--red-ink); }
+      .poscard .cardfoot { margin-top: auto; }
+
+      footer.site { border-top: 1px solid var(--line); padding: 22px 0 34px; color: var(--muted); font-size: .85rem; margin-top: 10px; }
+      footer.site .wrap { display: flex; gap: 14px; flex-wrap: wrap; justify-content: space-between; }
+      .empty { background: var(--surface); border: 1px dashed var(--line); border-radius: 12px; padding: 22px; color: var(--muted); }
+    
+      /* split-site additions: nav/tiles are real links now, same look as the buttons */
+      .pages a { flex: none; background: transparent; border: 1px solid transparent; color: #dbe2ec;
+        padding: 7px 12px; border-radius: 999px; font-size: .86rem; font-weight: 600; min-height: 36px;
+        display: inline-flex; align-items: center; text-decoration: none; }
+      .pages a:hover { background: rgba(255,255,255,.1); color: #fff; }
+      .pages a[aria-current="page"] { background: #f3efe3; color: #152a44; }
+      a.btn { display: inline-flex; align-items: center; text-decoration: none; }
+      a.tile { text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap">
+        <div class="brandrow">
+          <div class="ball" aria-hidden="true"></div>
+          <div class="brandname">Hoosier Diamond <span>Directory</span></div>
+          <div class="brandsub">Youth baseball in Indiana — tournaments,<br />training, gear &amp; straight answers</div>
+        </div>
+        <nav class="pages" id="topnav" aria-label="Directory pages"><a href="index.html">Home</a><a href="tournaments.html">Tournaments</a><a href="player-pool.html">Player Pool</a><a href="cages.html">Cages</a><a href="bats.html">Best Bats</a><a href="best-bat-10u.html">Best Bat 10U</a><a href="bat-sizing.html" aria-current="page">Bat Sizing</a><a href="training-tools.html">Training Tools</a><a href="gloves.html">Best Gloves</a><a href="best-glove-10u.html">Best Glove 10U</a><a href="cleats.html">Starter Kit</a><a href="first-season.html">First Season</a><a href="bat-rules.html">Bat Rules</a><a href="questions.html">Team Questions</a><a href="how.html">How It Works</a></nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+
+<section class="page" data-page="bat-sizing">
+        <div class="crumb">Gear guide · Bat sizing</div>
+        <h1 class="pagetitle">Youth Bat Sizing Guide: Length, Drop &amp; Stamp by Age</h1>
+        <p class="lede">Three numbers decide the bat — stamp, length, drop — in that order. Get the stamp wrong and the other two don't matter: a $300 bat with the wrong stamp is a $300 practice bat.</p>
+        <div style="height:16px"></div>
+
+        <section class="block">
+          <h2>1 · The stamp decides first</h2>
+          <div class="prose">
+            <p>Every non-wood bat carries a certification stamp on the taper, just above the grip. The three that matter in Indiana youth baseball are not interchangeable — a USSSA bat is not legal in a USA Baseball league, and a USA bat gives up pop in USSSA play.</p>
+            <table class="costs">
+              <thead><tr><th>Stamp</th><th>Where it's required</th><th>Max barrel</th><th>Drops</th></tr></thead>
+              <tbody>
+                <tr><td><strong>USA Baseball</strong></td><td>Little League, Cal Ripken / Babe Ruth, PONY and most rec leagues</td><td class="amt">2&#8532;&Prime;</td><td>Any (usually &minus;5 to &minus;13)</td></tr>
+                <tr><td><strong>USSSA 1.15 BPF</strong></td><td>Travel ball and USSSA tournaments, 12U and under</td><td class="amt">2&frac34;&Prime;</td><td>Any (&minus;5 to &minus;13); 13U is &minus;8 or heavier</td></tr>
+                <tr><td><strong>BBCOR .50</strong></td><td>High school (NFHS), college, and USSSA 14U — the national standard at 14U since Jan 1, 2026</td><td class="amt">2&#8532;&Prime;</td><td>&minus;3 only</td></tr>
+              </tbody>
+            </table>
+            <p><strong>USA Baseball</strong> bats are built to perform like wood — less pop, more emphasis on the swing. <strong>USSSA 1.15 BPF</strong> bats are the hottest of the three, with the bigger 2&frac34;&Prime; barrel. <strong>BBCOR</strong> bats are always &minus;3 and always 2&#8532;&Prime;; a 33-inch BBCOR weighs at least 30 ounces. One more change to know: starting in 2028, high school adds lighter &minus;4, &minus;5 and &minus;6 options alongside &minus;3, so the jump to high school weight gets a ramp. For the 2027 season, high school is still &minus;3 only.</p>
+            <p>Still deciding between stamps? The <a href="bat-rules.html">Bat Rules page</a> settles USSSA vs. USA Baseball in two minutes.</p>
+          </div>
+        </section>
+
+        <section class="block">
+          <h2>2 · Size by age</h2>
+          <div class="prose">
+            <p>Age is the starting point — height and strength move a player up or down a size from here. Length is measured knob to barrel end; drop is length minus weight in ounces.</p>
+            <table class="costs">
+              <thead><tr><th>Age</th><th>Typical length</th><th>Drop</th><th>Stamp</th></tr></thead>
+              <tbody>
+                <tr><td>5–7 (tee ball / coach pitch)</td><td class="amt">24&Prime;–26&Prime;</td><td class="amt">&minus;12 to &minus;13</td><td>USA Baseball tee-ball stamp</td></tr>
+                <tr><td>8–9</td><td class="amt">26&Prime;–28&Prime;</td><td class="amt">&minus;10 to &minus;12</td><td>USA (rec) / USSSA (travel)</td></tr>
+                <tr><td>10</td><td class="amt">28&Prime;–29&Prime;</td><td class="amt">&minus;10 to &minus;11</td><td>USA / USSSA</td></tr>
+                <tr><td>11–12</td><td class="amt">30&Prime;–31&Prime;</td><td class="amt">&minus;8 to &minus;10</td><td>USA / USSSA</td></tr>
+                <tr><td>13</td><td class="amt">31&Prime;–32&Prime;</td><td class="amt">&minus;5 to &minus;8</td><td>USSSA &minus;8 / &minus;5 (check event rules)</td></tr>
+                <tr><td>14</td><td class="amt">31&Prime;–32&Prime;</td><td class="amt">&minus;3</td><td>BBCOR or wood</td></tr>
+                <tr><td>15–16</td><td class="amt">32&Prime;–33&Prime;</td><td class="amt">&minus;3</td><td>BBCOR</td></tr>
+                <tr><td>17+</td><td class="amt">33&Prime;–34&Prime;</td><td class="amt">&minus;3</td><td>BBCOR</td></tr>
+              </tbody>
+            </table>
+            <p><strong>Drop, worked out:</strong> a 30-inch bat that weighs 20 ounces is a &minus;10. A bigger drop means a lighter bat for its length. Default to &minus;10 for anyone under 12, and go &minus;11 or &minus;12 for a smaller or younger player without a second thought.</p>
+          </div>
+        </section>
+
+        <section class="block">
+          <h2>3 · Size by height</h2>
+          <div class="prose">
+            <p>Height is the better guide than age — a 10-year-old can be anywhere from 4-foot-2 to 5-foot-2. Find your player's height, then check it against the age table above.</p>
+            <table class="costs">
+              <thead><tr><th>Player height</th><th>Bat length</th></tr></thead>
+              <tbody>
+                <tr><td>3&prime;5&Prime; and under</td><td class="amt">26&Prime;</td></tr>
+                <tr><td>3&prime;6&Prime;–3&prime;8&Prime;</td><td class="amt">27&Prime;</td></tr>
+                <tr><td>3&prime;9&Prime;–4&prime;0&Prime;</td><td class="amt">28&Prime;</td></tr>
+                <tr><td>4&prime;1&Prime;–4&prime;4&Prime;</td><td class="amt">29&Prime;</td></tr>
+                <tr><td>4&prime;5&Prime;–4&prime;8&Prime;</td><td class="amt">30&Prime;</td></tr>
+                <tr><td>4&prime;9&Prime;–5&prime;0&Prime;</td><td class="amt">31&Prime;</td></tr>
+                <tr><td>5&prime;5&Prime; and over</td><td class="amt">32&Prime; (consider it)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="block">
+          <h2>4 · Two fit tests, at home</h2>
+          <div class="prose">
+            <ul>
+              <li><strong>The hold test.</strong> Player holds the bat by the handle with the bottom hand only, arm straight out to the side at shoulder height. If the barrel starts dipping before about 30–45 seconds, it's too heavy.</li>
+              <li><strong>The swing test.</strong> Watch a real swing: if the barrel drags behind the hands, the bat is too long or too heavy. Bat speed beats barrel size at every youth age — when in doubt, go lighter.</li>
+            </ul>
+            <div class="callout"><strong>The expensive mistake</strong>Buy for the league you're in this season, not the one you hope to join next year — and don't spend $400 on a &minus;5 for a 13U player who will need a BBCOR &minus;3 at 14U. Check the stamp on the barrel before you pay, not after.</div>
+          </div>
+        </section>
+
+        <section class="block">
+          <h2>5 · Shop the size you just found</h2>
+          <div class="prose">
+            <p>Plain shop links for now — no affiliate tag yet, so these earn the site nothing. Prices were checked Nov 27, 2026 and change; the retailer's page is the source of truth. See the <a href="disclosure.html">Affiliate Disclosure</a> for what changes once the site joins a program.</p>
+          </div>
+          <div class="twocol">
+            <article class="card pick">
+              <div><span class="tag">USSSA · 8U–12U</span></div>
+              <h3>Marucci CATX2 2&frac34;&Prime; USSSA (&minus;10)</h3>
+              <p class="meta">Best for: 8U–12U travel · One-piece alloy</p>
+              <p class="note">The balanced alloy most Indiana travel kids end up swinging. $149.99 at Dick's, in stock at last check.</p>
+              <div class="cardfoot"><a class="afflink" href="https://www.dickssportinggoods.com/p/marucci-catx-2-alloy-23-4-usssa-bat-2025-10-24mccbctx2lly1023bbb/24mccbctx2lly1023bbb" target="_blank" rel="noopener">See it at Dick's Sporting Goods &rarr;</a></div>
+            </article>
+            <article class="card pick">
+              <div><span class="tag">USSSA · 11U–12U</span></div>
+              <h3>Louisville Slugger Atlas JBB USSSA 2026 (&minus;10)</h3>
+              <p class="meta">Best for: 11U–12U · One-piece alloy, balanced</p>
+              <p class="note">A step-up alloy with a bigger barrel for players moving to bigger fields. $199.99 at Dick's, in stock at last check.</p>
+              <div class="cardfoot"><a class="afflink" href="https://www.dickssportinggoods.com/p/louisville-slugger-atlas-23-4-jr-big-barrel-usssa-bat-2026-10-25loubbasetlsjbbssaee/25loubbasetlsjbbssaee" target="_blank" rel="noopener">See it at Dick's Sporting Goods &rarr;</a></div>
+            </article>
+            <article class="card pick">
+              <div><span class="tag">USA Baseball · Rec</span></div>
+              <h3>Rawlings 5150 USA (&minus;10)</h3>
+              <p class="meta">Best for: Rec / Little League · Alloy</p>
+              <p class="note">The rec-league workhorse, USA-stamped and light enough for small hands. $99.99 at Rawlings — check stock before ordering, it was listed out of stock at last check.</p>
+              <div class="cardfoot"><a class="afflink" href="https://www.rawlings.com/product/US9510-27%2F17.html" target="_blank" rel="noopener">See it at Rawlings &rarr;</a></div>
+            </article>
+            <article class="card pick">
+              <div><span class="tag">BBCOR · 14U+</span></div>
+              <h3>DeMarini Voodoo One BBCOR (&minus;3)</h3>
+              <p class="meta">Best for: 14U+ / high school · One-piece alloy</p>
+              <p class="note">For the jump to high school rules: light-swinging, honest feedback on mishits. 2025 model, $219.99 at Dick's, in stock at last check.</p>
+              <div class="cardfoot"><a class="afflink" href="https://www.dickssportinggoods.com/p/demarini-voodoo-one-bbcor-bat-3-24demavdn325xxxxxbsb/24demavdn325xxxxxbsb" target="_blank" rel="noopener">See it at Dick's Sporting Goods &rarr;</a></div>
+            </article>
+          </div>
+          <div class="prose">
+            <p style="font-size:.85rem; color:var(--muted);">Already know the size? The <a href="bats.html">Best Bats page</a> has the full pick list split by stamp. Sources for the tables above: <a href="https://www.dugoutedge.com/articles/baseball-bat-size-chart-by-age-height-weight" target="_blank" rel="noopener">Dugout Edge bat size chart</a> · <a href="https://www.directsports.com/pages/baseball-bat-buying-guide?srsltid=AfmBOop2SiqYRD-fccNUpNiBAsNXcz-d6O8J85wdkQjM4iLjGp7NKIl_" target="_blank" rel="noopener">Direct Sports bat buying guide</a> · <a href="https://worth.rawlings.com/bat-sizing-guide.html" target="_blank" rel="noopener">Easton / Rawlings bat sizing guide</a> · <a href="https://batblueprint.com/baseball-bat-size-chart/" target="_blank" rel="noopener">Bat Blueprint</a> · <a href="https://batterboxsports.com/blogs/news/baseball-bat-size-chart" target="_blank" rel="noopener">Batter Box Sports</a> · <a href="https://fungofiles.com/bat-size/" target="_blank" rel="noopener">Fungo Files</a>. League rules change — confirm the stamp with your coach or league before you buy.</p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+<footer class="site">
+      <div class="wrap">
+        <span>Hoosier Diamond Directory — now with Covington 2027, more Indiana tournaments, Player Pool, the glove and bat sizing guides, training tools, and new Best Bat / Best Glove for 10U picks.</span>
+        <span>Contact: <a href="mailto:hoosierdiamonddirector@gmail.com">hoosierdiamonddirector@gmail.com</a> · <a href="https://player-pool.net/" target="_blank" rel="noopener">player-pool.net</a> · <a href="privacy.html">Privacy Policy</a> · <a href="disclosure.html">Affiliate Disclosure</a></span>
+        <span>Listings &amp; prices are typical ranges unless a host fee is shown, verified before anything goes public.</span>
+      </div>
+    </footer>  </body>
+</html>
