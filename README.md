@@ -9,6 +9,8 @@ team coach-eric, project `hoosier-diamond-directory`).
 
 - `index.html` — home: search, page tiles, hero
 - `tournaments.html` — Indiana Youth Baseball Tournaments (22 listings, age filter)
+- `tournaments-10u.html` — Indiana 10U Tournaments 2027 (28 listings)
+- `tournaments-12u.html` — Indiana 12U Tournaments 2027 (30 listings)
 - `cages.html` — Batting Cages & Training in Indiana (11 listings, type filter)
 - `bats.html` — Best Youth Bats by Age · `bat-sizing.html` — Bat Sizing Guide
 - `gloves.html` — Best Gloves (size by age & position)

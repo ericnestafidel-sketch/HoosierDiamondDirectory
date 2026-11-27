@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>Indiana 10U Baseball Tournaments 2027 | Hoosier Diamond Directory</title>
+    <meta name="description" content="2027 Indiana 10U baseball tournaments: Grand Park, Covington, USSSA state events and more — dates, fees, and how to pick one." />
+    <link rel="canonical" href="https://hoosier-diamond-directory.vercel.app/tournaments-10u.html" />
+    <meta property="og:title" content="Indiana 10U Baseball Tournaments 2027 | Hoosier Diamond Directory" />
+    <meta property="og:description" content="2027 Indiana 10U baseball tournaments: Grand Park, Covington, USSSA state events and more — dates, fees, and how to pick one." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hoosier-diamond-directory.vercel.app/tournaments-10u.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,900&family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <script defer src="/_vercel/insights/script.js"></script>
+    <style>
+      button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]) { min-height: 2rem; }
+      * { box-sizing: border-box; }
+      :root {
+        --bg: #f5f1e8;
+        --surface: #fffdf7;
+        --surface2: #efe9da;
+        --ink: #1d2534;
+        --muted: #5a6373;
+        --line: #ddd3bd;
+        --navy: #152a44;
+        --navy2: #0e1e33;
+        --red: #b23a26;
+        --red-ink: #9c3220;
+        --gold: #c08a1e;
+        --chip: #ece4cf;
+        --ok: #2e6b34;
+        --okbg: #e2efdd;
+        --warnbg: #f7ecd2;
+        --shadow: 0 10px 28px rgba(21, 42, 68, .12);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0f141c;
+          --surface: #171f2b;
+          --surface2: #1d2735;
+          --ink: #ede8db;
+          --muted: #a6adbb;
+          --line: #2d3747;
+          --navy: #0b1624;
+          --navy2: #081120;
+          --red: #e0684c;
+          --red-ink: #eda08c;
+          --gold: #d9a94f;
+          --chip: #232e3f;
+          --ok: #8fce97;
+          --okbg: #1e3320;
+          --warnbg: #38300f;
+          --shadow: 0 10px 28px rgba(0, 0, 0, .45);
+        }
+      }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Public Sans", system-ui, -apple-system, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+      h1, h2, h3 { font-family: "Fraunces", Georgia, serif; line-height: 1.12; margin: 0; }
+      p { margin: 0; }
+      a { color: var(--red-ink); }
+      button { font: inherit; cursor: pointer; }
+      .wrap { max-width: 1060px; margin: 0 auto; padding: 0 18px; }
+
+      /* ---------- header / nav ---------- */
+      header.site {
+        background: linear-gradient(180deg, var(--navy), var(--navy2));
+        color: #f3efe3;
+        position: sticky; top: 0; z-index: 40;
+        box-shadow: 0 2px 14px rgba(0,0,0,.25);
+      }
+      .brandrow { display: flex; align-items: center; gap: 12px; padding: 12px 0 4px; flex-wrap: wrap; }
+      .ball {
+        width: 38px; height: 38px; border-radius: 50%; flex: none;
+        background: #f7f3e8; position: relative;
+        box-shadow: inset 0 0 0 2px rgba(21,42,68,.15);
+      }
+      .ball::before, .ball::after {
+        content: ""; position: absolute; top: 4px; bottom: 4px; width: 12px;
+        border: 2px dashed #b23a26; border-radius: 50%;
+      }
+      .ball::before { left: 2px; border-right: none; }
+      .ball::after { right: 2px; border-left: none; }
+      .brandname { font-family: "Fraunces", Georgia, serif; font-weight: 900; font-size: 1.28rem; letter-spacing: .01em; }
+      .brandname span { color: #e8b23a; }
+      .brandname span.drafttag { color: #231a04; }
+      .brandsub { font-size: .78rem; color: #c9d2de; margin-left: auto; text-align: right; }
+      .drafttag {
+        display: inline-block; background: #e8b23a; color: #231a04; font-weight: 800;
+        font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; line-height: 1.5;
+        padding: 3px 10px; border-radius: 999px; vertical-align: 3px; margin-left: 8px;
+      }
+      nav.pages { display: flex; gap: 2px; flex-wrap: wrap; padding: 8px 0 10px; }
+      nav.pages::-webkit-scrollbar { display: none; }
+      nav.pages button {
+        flex: none; background: transparent; border: 1px solid transparent; color: #dbe2ec;
+        padding: 7px 12px; border-radius: 999px; font-size: .86rem; font-weight: 600; min-height: 36px;
+        white-space: nowrap;
+      }
+      nav.pages button:hover { background: rgba(255,255,255,.1); color: #fff; }
+      nav.pages button[aria-current="page"] { background: #f3efe3; color: #152a44; }
+
+      /* ---------- pages ---------- */
+      .page { display: none; padding: 26px 0 54px; }
+      .page.active { display: block; }
+      .pagetitle { font-size: clamp(1.7rem, 4.5vw, 2.5rem); font-weight: 900; margin-bottom: 8px; }
+      .lede { color: var(--muted); max-width: 62ch; font-size: 1.02rem; }
+      .crumb { font-size: .78rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--red-ink); margin-bottom: 10px; }
+
+      /* ---------- hero ---------- */
+      .hero { position: relative; border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); margin-bottom: 22px; }
+      .hero img { display: block; width: 100%; height: clamp(210px, 38vw, 340px); object-fit: cover; }
+      .hero .overlay {
+        position: absolute; inset: auto 0 0 0; padding: 20px 22px;
+        background: linear-gradient(180deg, transparent, rgba(9, 20, 36, .88) 55%);
+        color: #f6f2e6;
+      }
+      .hero h1 { font-size: clamp(1.65rem, 5vw, 2.6rem); font-weight: 900; max-width: 18ch; }
+      .hero p { color: #d8dee8; max-width: 56ch; margin-top: 6px; font-size: .98rem; }
+
+      /* ---------- search & filters ---------- */
+      .searchbar {
+        display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+        background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+        padding: 12px; box-shadow: var(--shadow); margin-bottom: 20px;
+      }
+      .searchbar input[type="search"] {
+        flex: 1 1 220px; border: 1px solid var(--line); border-radius: 8px; padding: 9px 12px;
+        background: var(--bg); color: var(--ink); font: inherit; min-height: 40px;
+      }
+      .chips { display: flex; gap: 6px; flex-wrap: wrap; }
+      .chipbtn {
+        border: 1px solid var(--line); background: var(--chip); color: var(--ink);
+        border-radius: 999px; padding: 6px 13px; font-size: .84rem; font-weight: 700; min-height: 36px;
+      }
+      .chipbtn[aria-pressed="true"] { background: var(--navy); color: #f3efe3; border-color: var(--navy); }
+      @media (prefers-color-scheme: dark) { .chipbtn[aria-pressed="true"] { background: #e8b23a; color: #231a04; border-color: #e8b23a; } }
+      .resultcount { font-size: .85rem; color: var(--muted); margin: 0 0 12px; }
+
+      /* ---------- cards ---------- */
+      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+        padding: 16px 16px 14px; display: flex; flex-direction: column; gap: 8px;
+      }
+      .card h3 { font-size: 1.12rem; font-weight: 600; }
+      .card .meta { font-size: .86rem; color: var(--muted); }
+      .card .note { font-size: .92rem; }
+      .cardfoot { margin-top: auto; padding-top: 8px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+      .fee { font-weight: 800; }
+      .tag {
+        font-size: .7rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+        background: var(--chip); border-radius: 5px; padding: 3px 7px; color: var(--ink);
+      }
+      .tag.red { background: var(--red); color: #fff; }
+      .afflink { font-weight: 700; font-size: .9rem; }
+      .affnote { font-size: .72rem; color: var(--muted); }
+
+      .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(225px, 1fr)); gap: 12px; margin: 18px 0 8px; }
+      .tile {
+        text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+        padding: 16px; color: var(--ink); display: block; width: 100%;
+      }
+      .tile:hover { border-color: var(--red); }
+      .tile .t { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 1.08rem; display: block; margin-bottom: 4px; }
+      .tile .d { font-size: .87rem; color: var(--muted); display: block; }
+      .tile .n { font-size: .72rem; font-weight: 800; color: var(--red-ink); letter-spacing: .07em; text-transform: uppercase; display: block; margin-bottom: 6px; }
+
+      section.block { margin-top: 34px; }
+      section.block > h2 { font-size: 1.45rem; font-weight: 900; margin-bottom: 6px; }
+      section.block > .sub { color: var(--muted); max-width: 64ch; margin-bottom: 14px; }
+
+      /* ---------- steps / how it works ---------- */
+      .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; counter-reset: step; }
+      .step { background: var(--surface2); border-radius: 12px; padding: 16px; }
+      .step .num {
+        counter-increment: step; font-family: "Fraunces", Georgia, serif; font-weight: 900;
+        font-size: 1.5rem; color: var(--red-ink); display: block; margin-bottom: 4px;
+      }
+      .step .num::before { content: counter(step, decimal-leading-zero); }
+      .step h3 { font-size: 1rem; margin-bottom: 4px; }
+      .step p { font-size: .88rem; color: var(--muted); }
+
+      .queue { display: flex; flex-direction: column; gap: 12px; }
+      .qcard { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+      .qcard h3 { font-size: 1.02rem; font-family: "Public Sans", sans-serif; font-weight: 800; }
+      .qcard .to { font-size: .85rem; color: var(--muted); margin: 2px 0 8px; }
+      .qcard .body { font-size: .92rem; background: var(--bg); border: 1px dashed var(--line); border-radius: 8px; padding: 10px 12px; }
+      .qactions { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; align-items: center; }
+      .btn {
+        border-radius: 8px; padding: 8px 16px; font-weight: 800; font-size: .9rem; min-height: 40px;
+        border: 1px solid var(--navy); background: var(--navy); color: #f3efe3;
+      }
+      .btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+      .btn:disabled { opacity: .45; cursor: default; }
+      .status { font-size: .85rem; font-weight: 700; }
+      .status.ok { color: var(--ok); }
+      .status.hold { color: var(--gold); }
+      .gatebar {
+        display: flex; gap: 10px; align-items: flex-start; background: var(--warnbg);
+        border-radius: 10px; padding: 12px 14px; font-size: .92rem; margin-bottom: 16px;
+      }
+      .gatebar strong { white-space: nowrap; }
+
+      /* ---------- gear & guides ---------- */
+      .gearhero { border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); margin-bottom: 20px; }
+      .gearhero img { display: block; width: 100%; height: clamp(180px, 30vw, 260px); object-fit: cover; }
+      .pick { border-top: 3px solid var(--red); }
+      .pick .why { font-size: .92rem; }
+      .pick .price { font-size: 1.05rem; font-weight: 800; }
+      .prose { max-width: 68ch; }
+      .prose h2 { font-size: 1.35rem; font-weight: 900; margin: 26px 0 8px; }
+      .prose h2:first-child { margin-top: 0; }
+      .prose p { margin-bottom: 12px; }
+      .prose ul { margin: 0 0 12px; padding-left: 20px; }
+      .prose li { margin-bottom: 6px; }
+      .callout { background: var(--surface2); border-radius: 10px; padding: 14px 16px; margin: 16px 0; font-size: .95rem; }
+      .callout strong { display: block; margin-bottom: 3px; }
+
+      table.costs { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; font-size: .94rem; }
+      table.costs th, table.costs td { padding: 11px 13px; text-align: left; vertical-align: top; }
+      table.costs thead th { background: var(--navy); color: #f3efe3; font-family: "Public Sans", sans-serif; font-size: .82rem; letter-spacing: .05em; text-transform: uppercase; }
+      table.costs tbody tr + tr td { border-top: 1px solid var(--line); }
+      table.costs td.amt { font-weight: 800; white-space: nowrap; }
+      @media (max-width: 560px) {
+        table.costs td.amt { white-space: normal; }
+        .brandsub { display: none; }
+        .hero img { height: 150px; }
+        .hero .overlay { position: static; background: var(--navy2); padding: 16px 18px 18px; }
+        .hero h1 { font-size: 1.5rem; }
+      }
+
+      /* ---------- featured / spotlight ---------- */
+      .feature {
+        background: linear-gradient(135deg, var(--navy), var(--navy2)); color: #f3efe3;
+        border-radius: 14px; padding: 20px 22px; box-shadow: var(--shadow); margin: 0 0 20px;
+        display: flex; gap: 18px; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      }
+      .feature h2 { font-size: 1.45rem; font-weight: 900; margin-bottom: 6px; }
+      .feature p { color: #d8dee8; max-width: 58ch; font-size: .96rem; }
+      .feature .cta { display: flex; gap: 8px; flex-wrap: wrap; flex: none; }
+      .feature .btn.light { background: #e8b23a; border-color: #e8b23a; color: #231a04; }
+      .feature .btn.outline { background: transparent; border-color: rgba(255,255,255,.45); color: #f3efe3; }
+      .spotlight { background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--gold); border-radius: 12px; padding: 18px; }
+      .spotlight h3 { font-size: 1.2rem; margin-bottom: 6px; }
+      .datelist { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px; margin: 14px 0 6px; }
+      .dateitem { background: var(--surface2); border-radius: 10px; padding: 12px 14px; }
+      .dateitem strong { display: block; font-size: .98rem; }
+      .dateitem span { font-size: .84rem; color: var(--muted); }
+      .twocol { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+
+      /* ---------- glove sizing & positions ---------- */
+      .agegrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+      .agecard { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 15px; }
+      .agecard .age { font-family: "Fraunces", Georgia, serif; font-weight: 900; font-size: 1.18rem; display: block; }
+      .agecard .level { font-size: .74rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--red-ink); display: block; margin-bottom: 8px; }
+      .agecard dl { margin: 0; font-size: .88rem; }
+      .agecard dl div { display: flex; justify-content: space-between; gap: 10px; padding: 4px 0; border-top: 1px solid var(--line); }
+      .agecard dt { color: var(--muted); }
+      .agecard dd { margin: 0; font-weight: 800; text-align: right; white-space: nowrap; }
+      .agecard .tip { font-size: .84rem; color: var(--muted); margin-top: 9px; }
+      .posgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+      .poscard { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+      .poscard h3 { font-size: 1.12rem; font-weight: 600; }
+      .poscard .spec { font-size: .84rem; font-weight: 700; color: var(--ink); background: var(--surface2); border-radius: 8px; padding: 8px 10px; }
+      .poscard p { font-size: .92rem; }
+      .poscard .buy { font-size: .9rem; }
+      .poscard .buy strong { color: var(--ok); }
+      .poscard .skip strong { color: var(--red-ink); }
+      .poscard .cardfoot { margin-top: auto; }
+
+      footer.site { border-top: 1px solid var(--line); padding: 22px 0 34px; color: var(--muted); font-size: .85rem; margin-top: 10px; }
+      footer.site .wrap { display: flex; gap: 14px; flex-wrap: wrap; justify-content: space-between; }
+      .empty { background: var(--surface); border: 1px dashed var(--line); border-radius: 12px; padding: 22px; color: var(--muted); }
+    
+      /* split-site additions: nav/tiles are real links now, same look as the buttons */
+      .pages a { flex: none; background: transparent; border: 1px solid transparent; color: #dbe2ec;
+        padding: 7px 12px; border-radius: 999px; font-size: .86rem; font-weight: 600; min-height: 36px;
+        display: inline-flex; align-items: center; text-decoration: none; }
+      .pages a:hover { background: rgba(255,255,255,.1); color: #fff; }
+      .pages a[aria-current="page"] { background: #f3efe3; color: #152a44; }
+      a.btn { display: inline-flex; align-items: center; text-decoration: none; }
+      a.tile { text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap">
+        <div class="brandrow">
+          <div class="ball" aria-hidden="true"></div>
+          <div class="brandname">Hoosier Diamond <span>Directory</span></div>
+          <div class="brandsub">Youth baseball in Indiana — tournaments,<br />training, gear &amp; straight answers</div>
+        </div>
+        <nav class="pages" id="topnav" aria-label="Directory pages"><a href="index.html">Home</a><a href="tournaments.html">Tournaments</a><a href="tournaments-10u.html" aria-current="page">10U Tournaments</a><a href="tournaments-12u.html">12U Tournaments</a><a href="player-pool.html">Player Pool</a><a href="cages.html">Cages</a><a href="bats.html">Best Bats</a><a href="best-bat-10u.html">Best Bat 10U</a><a href="best-bat-12u.html">Best Bat 12U</a><a href="bat-sizing.html">Bat Sizing</a><a href="bat-size-7-year-old.html">Bat Size Age 7</a><a href="bat-size-8-year-old.html">Bat Size Age 8</a><a href="bat-size-9-year-old.html">Bat Size Age 9</a><a href="training-tools.html">Training Tools</a><a href="gloves.html">Best Gloves</a><a href="best-glove-10u.html">Best Glove 10U</a><a href="best-cleats.html">Best Cleats</a><a href="cleats.html">Starter Kit</a><a href="first-season.html">First Season</a><a href="bat-rules.html">Bat Rules</a><a href="usssa-vs-usa-bat-rules.html">USSSA vs USA</a><a href="questions.html">Team Questions</a><a href="how.html">How It Works</a></nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+
+<section class="page" data-page="tournaments-10u">
+        <div class="crumb">Directory · Tournaments</div>
+        <h1 class="pagetitle">Indiana 10U Baseball Tournaments 2027</h1>
+        <p class="lede">Every 2027 Indiana tournament with a 10U division — from the big Grand Park weekends to Covington&#x27;s small-town $450 series and the USSSA state events. 10U is the last age where the game still feels like kid baseball, so the right weekend is one with real games, a reasonable drive, and a format that doesn&#x27;t keep 9- and 10-year-olds at the park for 12 hours.</p>
+        <div style="height:16px"></div>
+        <p class="resultcount">28 tournaments with a 10U division</p>
+        <div class="grid">
+          <article class="card"><div><span class="tag red">Winter indoor</span></div><h3>USSSA Santa Slam (Indoor, NEXUS Fieldhouse)</h3><p class="meta">Columbus · Ages 10U–12U listed · Dec 4–6, 2026</p><p class="note">Indoor turf at Circle K / NEXUS Fieldhouse in Columbus — 3 games guaranteed, AA state qualifier, no gate fee as listed. One of the few real December baseball weekends in Indiana.</p><div class="cardfoot"><span class="fee">$420 / team</span><a class="afflink" href="https://www.traveltourney.com/baseball-tournaments/indiana/" target="_blank" rel="noopener">Listing &amp; registration →</a></div></article>
+          <article class="card"><div><span class="tag red">Winter indoor</span></div><h3>USSSA New Year&#x27;s Bash (Indoor One-Day)</h3><p class="meta">Columbus · Ages 8U–12U · Dec 28, 2026–Jan 3, 2027</p><p class="note">One-day indoor tournaments across the New Year week at Columbus — 3 games guaranteed as listed. Easy way to get winter reps without committing to a full weekend.</p><div class="cardfoot"><span class="fee">From $350 / team</span><a class="afflink" href="https://www.traveltourney.com/baseball-tournaments/indiana/" target="_blank" rel="noopener">Listing &amp; registration →</a></div></article>
+          <article class="card"><div><span class="tag red">Season opener</span></div><h3>USSSA Rustbuster (All Turf)</h3><p class="meta">Brownsburg / Indy · Ages 8U–14U · Mar 5–7, 2027</p><p class="note">Early-March all-turf opener in the Indy–Brownsburg area — built to actually get played when Indiana March weather tries to cancel everything else.</p><div class="cardfoot"><span class="fee">See host listing</span><a class="afflink" href="https://www.traveltourney.com/baseball-tournaments/indiana/" target="_blank" rel="noopener">Listing &amp; registration →</a></div></article>
+          <article class="card"><div><span class="tag red">100 teams in 2026</span></div><h3>Turf Madness at Grand Park</h3><p class="meta">Westfield · Grand Park · Ages 7U–14U · Mar 19–21, 2027</p><p class="note">USSSA Turf Madness at the Bullpen / Grand Park — one of the biggest March weekends in the state (100 teams in 2026 as listed). Expect deep brackets and a full Grand Park experience.</p><div class="cardfoot"><span class="fee">See host listing</span><a class="afflink" href="https://diamondtime.app/tournaments/indiana" target="_blank" rel="noopener">Indiana tournament hub →</a></div></article>
+          <article class="card"><div><span class="tag red">GMB</span></div><h3>GMB Swing Into Spring — Indiana</h3><p class="meta">Greenwood · Greenwood Sports Park · Ages 8U–13U · Mar 13–14, 2027</p><p class="note">Greater Midwest Baseball&#x27;s Indiana spring stop in Greenwood — a south-side Indy option with ring-style GMB presentation at a lower price point than the big complexes.</p><div class="cardfoot"><span class="fee">$250–$425 / team</span><a class="afflink" href="https://www.traveltourney.com/baseball-tournaments/indiana/" target="_blank" rel="noopener">Listing &amp; registration →</a></div></article>
+          <article class="card"><div><span class="tag red">State Qualifier</span></div><h3>USSSA Crack the Eggs — Indiana</h3><p class="meta">Columbus / North Vernon / Seymour · Ages 7U–14U · Mar 27, 2027 (Sat only)</p><p class="note">One-day, Saturday-only USSSA state qualifier across Lincoln Park (Columbus), Kasting Park (Seymour), North Vernon City Park and more. An early-season measuring stick at a low price.</p><div class="cardfoot"><span class="fee">$200–$350 / team</span><a class="afflink" href="https://inbaseball.usssa.com/event/usssa-crack-the-eggs-indiana/" target="_blank" rel="noopener">Event page &amp; registration →</a></div></article>
+          <article class="card"><div><span class="tag red">Biggest venue</span></div><h3>Bullpen Tournaments at Grand Park</h3><p class="meta">Westfield · Ages 8U–18U · Apr–Oct</p><p class="note">The 26-field Grand Park complex is the center of Indiana travel ball. Deep fields, every age group, and the toughest brackets in the state.</p><div class="cardfoot"><span class="fee">$595–$895 / team</span><span class="affnote">Entry via host site</span></div></article>
+          <article class="card"><div></div><h3>Game Day USA — Indy &amp; Fort Wayne</h3><p class="meta">Indianapolis · Fort Wayne · Ages 8U–14U · Apr–Aug</p><p class="note">A steady calendar of 3-game-guarantee weekends, good first-tournament choice for new travel teams.</p><div class="cardfoot"><span class="fee">$495–$695 / team</span><span class="affnote">Entry via host site</span></div></article>
+          <article class="card"><div><span class="tag red">Near Purdue</span></div><h3>USSSA Boiler Up</h3><p class="meta">Lafayette · Crosser Sports Complex · Ages 8U–12U · Apr 9–11, 2027</p><p class="note">Listed as &#x27;sells out yearly&#x27; — a Lafayette weekend with a Purdue visit built into the trip. Strong pick for west-central Indiana teams who play Covington and Crawfordsville all summer.</p><div class="cardfoot"><span class="fee">See host listing</span><a class="afflink" href="https://www.traveltourney.com/organizers/indiana-usssa-baseball-state-office/" target="_blank" rel="noopener">USSSA Indiana listings →</a></div></article>
+          <article class="card"><div><span class="tag red">Lake Michigan</span></div><h3>Battle by the Shore</h3><p class="meta">Michigan City · Patriot Park · Ages 9U–14U · Apr 16–18, 2027</p><p class="note">Patriot Park by Lake Michigan — a destination weekend for northern Indiana teams, with a very different field and weather feel from central Indiana.</p><div class="cardfoot"><span class="fee">See host listing</span><a class="afflink" href="https://www.traveltourney.com/organizers/indiana-usssa-baseball-state-office/" target="_blank" rel="noopener">USSSA Indiana listings →</a></div></article>
+          <article class="card"><div><span class="tag red">Sells out annually</span></div><h3>Hit and Run Showdown</h3><p class="meta">Kokomo · Northwest Park · Ages 9U–14U · Apr 23–25, 2027</p><p class="note">Kokomo&#x27;s annual USSSA showdown, listed as selling out — a central-Indiana weekend that avoids the Indianapolis hotel prices.</p><div class="cardfoot"><span class="fee">See host listing</span><a class="afflink" href="https://www.traveltourney.com/organizers/indiana-usssa-baseball-state-office/" target="_blank" rel="noopener">USSSA Indiana listings →</a></div></article>
+          <article class="card"><div><span class="tag red">230 teams in 2026</span></div><h3>RBI Showdown</h3><p class="meta">Indianapolis area · Ages 7U–14U · Apr 30, 2027</p><p class="note">One of the largest spring weekends on the Indiana calendar — 230 teams in 2026 as listed. If you want to see where your team really stacks up in the state, this is a measuring-stick weekend.</p><div class="cardfoot"><span class="fee">See host listing</span><a class="afflink" href="https://www.traveltourney.com/organizers/indiana-usssa-baseball-state-office/" target="_blank" rel="noopener">USSSA Indiana listings →</a></div></article>
+          <article class="card"><div><span class="tag red">Ranking points</span></div><h3>USSSA Indiana Super NIT</h3><p class="meta">Indianapolis · Ages 9U–14U · May</p><p class="note">A national-points event that draws out-of-state teams. Win here and your team&#x27;s ranking travels with you all summer.</p><div class="cardfoot"><span class="fee">$525–$725 / team</span><span class="affnote">Entry via host site</span></div></article>
+          <article class="card"><div></div><h3>Pastime Tournaments — Indy Series</h3><p class="meta">Indianapolis area · Ages 9U–18U · May–Jul</p><p class="note">Well-run wood-bat and metal-bat weekends across metro Indy fields, popular with 13U+ teams getting ready for high school ball.</p><div class="cardfoot"><span class="fee">$550–$850 / team</span><span class="affnote">Entry via host site</span></div></article>
+          <article class="card"><div><span class="tag red">New · Covington</span></div><h3>Covington — Swing For The Fences</h3><p class="meta">Covington · Covington City Park · Ages Youth divisions — confirm with host · May 1–2, 2027</p><p class="note">Opening weekend of the Covington Boys Baseball League 2027 series at Covington City Park, run by CLR Tournament Directors (contact: Chuck Robinson). Small-town Wabash Valley baseball — Indiana and Illinois teams, no big-complex stay-to-play.</p><div class="cardfoot"><span class="fee">$450 / team (2027 as announced)</span><a class="afflink" href="https://www.facebook.com/ClrTournamentDirectors/posts/pfbid04zJmWFGY2vMw8krMARGatsVmF3vucBG8KmKBos912eTFawGWprxq7ubWY2gUAhDul" target="_blank" rel="noopener">2027 schedule post →</a></div></article>
+          <article class="card"><div><span class="tag red">Covington</span></div><h3>Covington — May Madness</h3><p class="meta">Covington · Covington City Park · Ages Youth divisions — confirm with host · May 15–16, 2027</p><p class="note">The long-running May Madness weekend in Covington — historically draws Crawfordsville, North Montgomery, Danville-area and Illinois border teams. Second of four Covington weekends in 2027.</p><div class="cardfoot"><span class="fee">$450 / team (2027 as announced)</span><a class="afflink" href="https://www.facebook.com/ClrTournamentDirectors/posts/pfbid04zJmWFGY2vMw8krMARGatsVmF3vucBG8KmKBos912eTFawGWprxq7ubWY2gUAhDul" target="_blank" rel="noopener">2027 schedule post →</a></div></article>
+          <article class="card"><div></div><h3>USSSA Memorial Day Border Wars</h3><p class="meta">Clarksville / New Albany / Columbus · Ages 7U–14U · May 28–30, 2027</p><p class="note">Memorial Day weekend hosted by Ohio Valley Sports — pool play into single elimination, no gate fee as listed. A southern-Indiana option for the holiday weekend.</p><div class="cardfoot"><span class="fee">From $300 / team</span><a class="afflink" href="https://www.traveltourney.com/baseball-tournaments/indiana/" target="_blank" rel="noopener">Indiana tournament hub →</a></div></article>
+          <article class="card"><div><span class="tag red">Season peak</span></div><h3>USSSA Indiana State Championships</h3><p class="meta">Columbus · Ages 8U–14U · Jun</p><p class="note">The state title weekend for USSSA-classified teams. Brackets are seeded by season points, so spring results matter.</p><div class="cardfoot"><span class="fee">$450–$650 / team</span><span class="affnote">Entry via host site</span></div></article>
+          <article class="card"><div><span class="tag red">Covington</span></div><h3>Covington — June Jamboree</h3><p class="meta">Covington · Covington City Park · Ages Youth divisions — confirm with host · Jun 19–20, 2027</p><p class="note">Mid-summer Covington stop — a good, affordable alternative to a Grand Park weekend for west-central Indiana teams. Third of four Covington weekends in 2027.</p><div class="cardfoot"><span class="fee">$450 / team (2027 as announced)</span><a class="afflink" href="https://www.facebook.com/ClrTournamentDirectors/posts/pfbid04zJmWFGY2vMw8krMARGatsVmF3vucBG8KmKBos912eTFawGWprxq7ubWY2gUAhDul" target="_blank" rel="noopener">2027 schedule post →</a></div></article>
+          <article class="card"><div><span class="tag red">GMB Nationals</span></div><h3>GMB Gold Ring Nationals — Indiana</h3><p class="meta">Greenwood · Greenwood Sports Park · Ages 8U–13U · Jun 11–13, 2027</p><p class="note">GMB&#x27;s Indiana nationals weekend in Greenwood — pool play into single elimination, aimed at teams that want a &#x27;national&#x27; weekend without leaving Indiana.</p><div class="cardfoot"><span class="fee">See host listing</span><a class="afflink" href="https://www.traveltourney.com/baseball-tournaments/indiana/" target="_blank" rel="noopener">Listing &amp; registration →</a></div></article>
+          <article class="card"><div><span class="tag red">4-game guarantee</span></div><h3>Youth Amateur Baseball Championships at Grand Park</h3><p class="meta">Westfield · Grand Park · Ages 8U–12U · Jun 17–20, 2027</p><p class="note">The 11th annual YABC: four guaranteed games, an opening ceremony and skills competition on Thursday, and a champion in every age group from 8U through 12U. Bats BPF 1.15 max, USSSA or USA stamp.</p><div class="cardfoot"><span class="fee">$399–$799 / team (10U $699, 12U $799 as listed)</span><a class="afflink" href="https://tournaments.prepbaseballreport.com/public/events/youth-amateur-baseball-championships-grand-park-westfield-in-06-17-2027" target="_blank" rel="noopener">Event page &amp; registration →</a></div></article>
+          <article class="card"><div><span class="tag red">State title</span></div><h3>USSSA Class A State Tournament</h3><p class="meta">Columbus / Greensburg / Seymour · Ages 9U–14U · Jun 18–20, 2027</p><p class="note">The Class A state title weekend. Teams must play in three USSSA events by June 7 to be eligible — fall 2026 events count. State champions earn 1,000 USSSA points.</p><div class="cardfoot"><span class="fee">$425–$550 / team</span><a class="afflink" href="https://inbaseball.usssa.com/event/usssa-class-a-state-tournament-2/" target="_blank" rel="noopener">Event page &amp; registration →</a></div></article>
+          <article class="card"><div><span class="tag red">400 teams</span></div><h3>STATE Tournament AA-AAA-Major (400 teams)</h3><p class="meta">Indy–Columbus–Brownsburg · Ages 9U–15U · Jun 11–13, 2027</p><p class="note">One of the biggest weekends on the Indiana calendar — 400 teams annually as listed, 3-game guarantee, pool play into single elimination at Canes Midwest Sports Complex (Brownsburg).</p><div class="cardfoot"><span class="fee">From $425 / team (12U $525)</span><a class="afflink" href="https://www.traveltourney.com/tournaments/2027/state-tournament-aa-aaa-major-400-teams-annually-indy-columbus-brownsburg-in/" target="_blank" rel="noopener">Listing &amp; registration →</a></div></article>
+          <article class="card"><div></div><h3>WBA Summer Hoosier Classic (Turf)</h3><p class="meta">Fort Wayne · World Baseball Academy · Ages 10U–15U · Jun 3–6, 2027</p><p class="note">Turf-field weekend in Fort Wayne at the World Baseball Academy — a northern-Indiana summer stop with no gate fee as listed.</p><div class="cardfoot"><span class="fee">From $525 / team</span><a class="afflink" href="https://www.traveltourney.com/baseball-tournaments/indiana/" target="_blank" rel="noopener">Indiana tournament hub →</a></div></article>
+          <article class="card"><div><span class="tag red">GMB</span></div><h3>GMB Father&#x27;s Day Classic — Indiana</h3><p class="meta">Greenwood · Greenwood Sports Park · Ages 8U–13U · Jun 18–20, 2027</p><p class="note">Greater Midwest Baseball&#x27;s Father&#x27;s Day weekend in Greenwood — ring-style GMB presentation at a south-side Indy price point.</p><div class="cardfoot"><span class="fee">See host listing</span><a class="afflink" href="https://www.traveltourney.com/baseball-tournaments/indiana/" target="_blank" rel="noopener">Indiana tournament hub →</a></div></article>
+          <article class="card"><div><span class="tag red">GMB</span></div><h3>GMB Summer Showdown — Indiana</h3><p class="meta">Greenwood · Greenwood Sports Park · Ages 8U–13U · Jun 25–27, 2027</p><p class="note">GMB&#x27;s late-June weekend in Greenwood — a second south-side Indy date for teams that missed the Father&#x27;s Day Classic.</p><div class="cardfoot"><span class="fee">See host listing</span><a class="afflink" href="https://www.traveltourney.com/baseball-tournaments/indiana/" target="_blank" rel="noopener">Indiana tournament hub →</a></div></article>
+          <article class="card"><div><span class="tag red">Worth the drive</span></div><h3>Midwest Border Battle</h3><p class="meta">Evansville · Ages 10U–16U · Jul</p><p class="note">Southern Indiana&#x27;s draw event — Kentucky and Illinois teams cross the river for it, so the competition looks different in a good way.</p><div class="cardfoot"><span class="fee">$500–$700 / team</span><span class="affnote">Entry via host site</span></div></article>
+          <article class="card"><div><span class="tag red">Covington</span></div><h3>Covington — Summer Heat</h3><p class="meta">Covington · Covington City Park · Ages Youth divisions — confirm with host · Jul 10–11, 2027</p><p class="note">Final Covington weekend of the 2027 summer series at City Park — last chance for a low-drive, low-cost tournament before all-star and fall-ball season.</p><div class="cardfoot"><span class="fee">$450 / team (2027 as announced)</span><a class="afflink" href="https://www.facebook.com/ClrTournamentDirectors/posts/pfbid04zJmWFGY2vMw8krMARGatsVmF3vucBG8KmKBos912eTFawGWprxq7ubWY2gUAhDul" target="_blank" rel="noopener">2027 schedule post →</a></div></article>
+        </div>
+        <section class="block">
+          <h2>How to pick a 10U tournament</h2>
+          <div class="prose"><p><strong>For a first 10U tournament, pick close over big.</strong> A 3-game guarantee within an hour's drive beats a 200-team Grand Park weekend for a team still learning tournament baseball — save Grand Park for June, when the team has its feet under it.</p><p><strong>Watch the format, not the trophy.</strong> Pool play into single elimination is the standard. Anything promising 'double elimination' at 10U usually means long gaps between games — bring shade, snacks, and patience.</p><p><strong>Check the bat stamp before you enter.</strong> Most of these events take USSSA or USA bats (BPF 1.15 max); a few are USSSA-only. A bat that's legal in rec ball can be illegal on a tournament Saturday — see <a href="usssa-vs-usa-bat-rules.html">USSSA vs USA bat rules in plain English</a>.</p></div>
+        </section>
+        <section class="block">
+          <h2>Before you register</h2>
+          <div class="prose">
+            <p><strong>Confirm the division exists.</strong> Hosts change age offerings year to year, and a tournament listed as 7U–14U may not run every division every weekend. Check the host page for your exact age before paying.</p>
+            <p><strong>Fees are per team, gate fees are extra.</strong> Entry fees below are as published for 2027 or the typical range for recent seasons where the host has not published a 2027 fee — confirm on the host site before you budget around a number.</p>
+            <p><strong>Need a player for one of these weekends?</strong> Short a catcher or a pitcher? That is what <a href="https://player-pool.net/" target="_blank" rel="noopener">Player Pool</a> is for — approved coaches search available players by age, position and county. See <a href="player-pool.html">the Player Pool page</a>.</p>
+          </div>
+        </section>
+        <section class="block">
+          <h2>Sources</h2>
+          <div class="prose">
+            <p>Listings drawn from the directory's <a href="tournaments.html">main 2027 tournaments page</a> (22 events) plus new research for this page: Prep Baseball Tournaments event pages (Youth Amateur Baseball Championships), USSSA Indiana event pages (Crack the Eggs, Class A State Tournament), and the TravelTourney Indiana 12U hub. All dates and fees checked Nov 28, 2026 — hosts change details, so the host page is the final word.</p>
+          </div>
+        </section>
+        <p style="margin-top:26px;"><a href="tournaments.html">All Indiana tournaments, all ages →</a> · <a href="tournaments-12u.html">12U tournaments 2027 →</a></p>
+      </section>
+    </main>
+
+<footer class="site">
+      <div class="wrap">
+        <span>Hoosier Diamond Directory — now with Covington 2027, more Indiana tournaments, Player Pool, the glove and bat sizing guides, training tools, and new Best Bat for 10U and 12U, Best Glove for 10U, Bat Size for 7-, 8- and 9-Year-Old, Best Cleats, and USSSA vs USA Bat Rules in plain English, and Indiana 10U and 12U Tournaments 2027.</span>
+        <span>Contact: <a href="mailto:hoosierdiamonddirector@gmail.com">hoosierdiamonddirector@gmail.com</a> · <a href="https://player-pool.net/" target="_blank" rel="noopener">player-pool.net</a> · <a href="privacy.html">Privacy Policy</a> · <a href="disclosure.html">Affiliate Disclosure</a></span>
+        <span>Listings &amp; prices are typical ranges unless a host fee is shown, verified before anything goes public.</span>
+      </div>
+    </footer>
+  </body>
+</html>
