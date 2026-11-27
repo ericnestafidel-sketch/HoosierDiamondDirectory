@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>Indiana Rec Baseball Leagues: Little League, Babe Ruth &amp; Cal Ripken | Hoosier Diamond Directory</title>
+    <meta name="description" content="Find a rec baseball league near you in Indiana — Little League, Babe Ruth and Cal Ripken, plus independent community leagues. Searchable by county and city, with the plain-English difference between rec and travel." />
+    <link rel="canonical" href="https://hoosier-diamond-directory.vercel.app/rec-leagues.html" />
+    <meta property="og:title" content="Indiana Rec Baseball Leagues: Little League, Babe Ruth &amp; Cal Ripken | Hoosier Diamond Directory" />
+    <meta property="og:description" content="Find a rec baseball league near you in Indiana — Little League, Babe Ruth and Cal Ripken, plus independent community leagues. Searchable by county and city, with the plain-English difference between rec and travel." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hoosier-diamond-directory.vercel.app/rec-leagues.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,900&family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <script defer src="/_vercel/insights/script.js"></script>
+    <style>
+      button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]) { min-height: 2rem; }
+      * { box-sizing: border-box; }
+      :root {
+        --bg: #f5f1e8;
+        --surface: #fffdf7;
+        --surface2: #efe9da;
+        --ink: #1d2534;
+        --muted: #5a6373;
+        --line: #ddd3bd;
+        --navy: #152a44;
+        --navy2: #0e1e33;
+        --red: #b23a26;
+        --red-ink: #9c3220;
+        --gold: #c08a1e;
+        --chip: #ece4cf;
+        --ok: #2e6b34;
+        --okbg: #e2efdd;
+        --warnbg: #f7ecd2;
+        --shadow: 0 10px 28px rgba(21, 42, 68, .12);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0f141c;
+          --surface: #171f2b;
+          --surface2: #1d2735;
+          --ink: #ede8db;
+          --muted: #a6adbb;
+          --line: #2d3747;
+          --navy: #0b1624;
+          --navy2: #081120;
+          --red: #e0684c;
+          --red-ink: #eda08c;
+          --gold: #d9a94f;
+          --chip: #232e3f;
+          --ok: #8fce97;
+          --okbg: #1e3320;
+          --warnbg: #38300f;
+          --shadow: 0 10px 28px rgba(0, 0, 0, .45);
+        }
+      }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Public Sans", system-ui, -apple-system, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+      h1, h2, h3 { font-family: "Fraunces", Georgia, serif; line-height: 1.12; margin: 0; }
+      p { margin: 0; }
+      a { color: var(--red-ink); }
+      button { font: inherit; cursor: pointer; }
+      .wrap { max-width: 1060px; margin: 0 auto; padding: 0 18px; }
+
+      /* ---------- header / nav ---------- */
+      header.site {
+        background: linear-gradient(180deg, var(--navy), var(--navy2));
+        color: #f3efe3;
+        position: sticky; top: 0; z-index: 40;
+        box-shadow: 0 2px 14px rgba(0,0,0,.25);
+      }
+      .brandrow { display: flex; align-items: center; gap: 12px; padding: 12px 0 4px; flex-wrap: wrap; }
+      .ball {
+        width: 38px; height: 38px; border-radius: 50%; flex: none;
+        background: #f7f3e8; position: relative;
+        box-shadow: inset 0 0 0 2px rgba(21,42,68,.15);
+      }
+      .ball::before, .ball::after {
+        content: ""; position: absolute; top: 4px; bottom: 4px; width: 12px;
+        border: 2px dashed #b23a26; border-radius: 50%;
+      }
+      .ball::before { left: 2px; border-right: none; }
+      .ball::after { right: 2px; border-left: none; }
+      .brandname { font-family: "Fraunces", Georgia, serif; font-weight: 900; font-size: 1.28rem; letter-spacing: .01em; }
+      .brandname span { color: #e8b23a; }
+      .brandname span.drafttag { color: #231a04; }
+      .brandsub { font-size: .78rem; color: #c9d2de; margin-left: auto; text-align: right; }
+      .drafttag {
+        display: inline-block; background: #e8b23a; color: #231a04; font-weight: 800;
+        font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; line-height: 1.5;
+        padding: 3px 10px; border-radius: 999px; vertical-align: 3px; margin-left: 8px;
+      }
+      nav.pages { display: flex; gap: 2px; flex-wrap: wrap; padding: 8px 0 10px; }
+      nav.pages::-webkit-scrollbar { display: none; }
+      nav.pages button {
+        flex: none; background: transparent; border: 1px solid transparent; color: #dbe2ec;
+        padding: 7px 12px; border-radius: 999px; font-size: .86rem; font-weight: 600; min-height: 36px;
+        white-space: nowrap;
+      }
+      nav.pages button:hover { background: rgba(255,255,255,.1); color: #fff; }
+      nav.pages button[aria-current="page"] { background: #f3efe3; color: #152a44; }
+
+      /* ---------- pages ---------- */
+      .page { display: none; padding: 26px 0 54px; }
+      .page.active { display: block; }
+      .pagetitle { font-size: clamp(1.7rem, 4.5vw, 2.5rem); font-weight: 900; margin-bottom: 8px; }
+      .lede { color: var(--muted); max-width: 62ch; font-size: 1.02rem; }
+      .crumb { font-size: .78rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--red-ink); margin-bottom: 10px; }
+
+      /* ---------- hero ---------- */
+      .hero { position: relative; border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); margin-bottom: 22px; }
+      .hero img { display: block; width: 100%; height: clamp(210px, 38vw, 340px); object-fit: cover; }
+      .hero .overlay {
+        position: absolute; inset: auto 0 0 0; padding: 20px 22px;
+        background: linear-gradient(180deg, transparent, rgba(9, 20, 36, .88) 55%);
+        color: #f6f2e6;
+      }
+      .hero h1 { font-size: clamp(1.65rem, 5vw, 2.6rem); font-weight: 900; max-width: 18ch; }
+      .hero p { color: #d8dee8; max-width: 56ch; margin-top: 6px; font-size: .98rem; }
+
+      /* ---------- search & filters ---------- */
+      .searchbar {
+        display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+        background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+        padding: 12px; box-shadow: var(--shadow); margin-bottom: 20px;
+      }
+      .searchbar input[type="search"] {
+        flex: 1 1 220px; border: 1px solid var(--line); border-radius: 8px; padding: 9px 12px;
+        background: var(--bg); color: var(--ink); font: inherit; min-height: 40px;
+      }
+      .chips { display: flex; gap: 6px; flex-wrap: wrap; }
+      .chipbtn {
+        border: 1px solid var(--line); background: var(--chip); color: var(--ink);
+        border-radius: 999px; padding: 6px 13px; font-size: .84rem; font-weight: 700; min-height: 36px;
+      }
+      .chipbtn[aria-pressed="true"] { background: var(--navy); color: #f3efe3; border-color: var(--navy); }
+      @media (prefers-color-scheme: dark) { .chipbtn[aria-pressed="true"] { background: #e8b23a; color: #231a04; border-color: #e8b23a; } }
+      .resultcount { font-size: .85rem; color: var(--muted); margin: 0 0 12px; }
+
+      /* ---------- cards ---------- */
+      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+        padding: 16px 16px 14px; display: flex; flex-direction: column; gap: 8px;
+      }
+      .card h3 { font-size: 1.12rem; font-weight: 600; }
+      .card .meta { font-size: .86rem; color: var(--muted); }
+      .card .note { font-size: .92rem; }
+      .cardfoot { margin-top: auto; padding-top: 8px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+      .fee { font-weight: 800; }
+      .tag {
+        font-size: .7rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+        background: var(--chip); border-radius: 5px; padding: 3px 7px; color: var(--ink);
+      }
+      .tag.red { background: var(--red); color: #fff; }
+      .afflink { font-weight: 700; font-size: .9rem; }
+      .affnote { font-size: .72rem; color: var(--muted); }
+
+      .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(225px, 1fr)); gap: 12px; margin: 18px 0 8px; }
+      .tile {
+        text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+        padding: 16px; color: var(--ink); display: block; width: 100%;
+      }
+      .tile:hover { border-color: var(--red); }
+      .tile .t { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 1.08rem; display: block; margin-bottom: 4px; }
+      .tile .d { font-size: .87rem; color: var(--muted); display: block; }
+      .tile .n { font-size: .72rem; font-weight: 800; color: var(--red-ink); letter-spacing: .07em; text-transform: uppercase; display: block; margin-bottom: 6px; }
+
+      section.block { margin-top: 34px; }
+      section.block > h2 { font-size: 1.45rem; font-weight: 900; margin-bottom: 6px; }
+      section.block > .sub { color: var(--muted); max-width: 64ch; margin-bottom: 14px; }
+
+      /* ---------- steps / how it works ---------- */
+      .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; counter-reset: step; }
+      .step { background: var(--surface2); border-radius: 12px; padding: 16px; }
+      .step .num {
+        counter-increment: step; font-family: "Fraunces", Georgia, serif; font-weight: 900;
+        font-size: 1.5rem; color: var(--red-ink); display: block; margin-bottom: 4px;
+      }
+      .step .num::before { content: counter(step, decimal-leading-zero); }
+      .step h3 { font-size: 1rem; margin-bottom: 4px; }
+      .step p { font-size: .88rem; color: var(--muted); }
+
+      .queue { display: flex; flex-direction: column; gap: 12px; }
+      .qcard { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+      .qcard h3 { font-size: 1.02rem; font-family: "Public Sans", sans-serif; font-weight: 800; }
+      .qcard .to { font-size: .85rem; color: var(--muted); margin: 2px 0 8px; }
+      .qcard .body { font-size: .92rem; background: var(--bg); border: 1px dashed var(--line); border-radius: 8px; padding: 10px 12px; }
+      .qactions { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; align-items: center; }
+      .btn {
+        border-radius: 8px; padding: 8px 16px; font-weight: 800; font-size: .9rem; min-height: 40px;
+        border: 1px solid var(--navy); background: var(--navy); color: #f3efe3;
+      }
+      .btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+      .btn:disabled { opacity: .45; cursor: default; }
+      .status { font-size: .85rem; font-weight: 700; }
+      .status.ok { color: var(--ok); }
+      .status.hold { color: var(--gold); }
+      .gatebar {
+        display: flex; gap: 10px; align-items: flex-start; background: var(--warnbg);
+        border-radius: 10px; padding: 12px 14px; font-size: .92rem; margin-bottom: 16px;
+      }
+      .gatebar strong { white-space: nowrap; }
+
+      /* ---------- gear & guides ---------- */
+      .gearhero { border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); margin-bottom: 20px; }
+      .gearhero img { display: block; width: 100%; height: clamp(180px, 30vw, 260px); object-fit: cover; }
+      .pick { border-top: 3px solid var(--red); }
+      .pick .why { font-size: .92rem; }
+      .pick .price { font-size: 1.05rem; font-weight: 800; }
+      .prose { max-width: 68ch; }
+      .prose h2 { font-size: 1.35rem; font-weight: 900; margin: 26px 0 8px; }
+      .prose h2:first-child { margin-top: 0; }
+      .prose p { margin-bottom: 12px; }
+      .prose ul { margin: 0 0 12px; padding-left: 20px; }
+      .prose li { margin-bottom: 6px; }
+      .callout { background: var(--surface2); border-radius: 10px; padding: 14px 16px; margin: 16px 0; font-size: .95rem; }
+      .callout strong { display: block; margin-bottom: 3px; }
+
+      table.costs { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; font-size: .94rem; }
+      table.costs th, table.costs td { padding: 11px 13px; text-align: left; vertical-align: top; }
+      table.costs thead th { background: var(--navy); color: #f3efe3; font-family: "Public Sans", sans-serif; font-size: .82rem; letter-spacing: .05em; text-transform: uppercase; }
+      table.costs tbody tr + tr td { border-top: 1px solid var(--line); }
+      table.costs td.amt { font-weight: 800; white-space: nowrap; }
+      @media (max-width: 560px) {
+        table.costs td.amt { white-space: normal; }
+        .brandsub { display: none; }
+        .hero img { height: 150px; }
+        .hero .overlay { position: static; background: var(--navy2); padding: 16px 18px 18px; }
+        .hero h1 { font-size: 1.5rem; }
+      }
+
+      /* ---------- featured / spotlight ---------- */
+      .feature {
+        background: linear-gradient(135deg, var(--navy), var(--navy2)); color: #f3efe3;
+        border-radius: 14px; padding: 20px 22px; box-shadow: var(--shadow); margin: 0 0 20px;
+        display: flex; gap: 18px; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      }
+      .feature h2 { font-size: 1.45rem; font-weight: 900; margin-bottom: 6px; }
+      .feature p { color: #d8dee8; max-width: 58ch; font-size: .96rem; }
+      .feature .cta { display: flex; gap: 8px; flex-wrap: wrap; flex: none; }
+      .feature .btn.light { background: #e8b23a; border-color: #e8b23a; color: #231a04; }
+      .feature .btn.outline { background: transparent; border-color: rgba(255,255,255,.45); color: #f3efe3; }
+      .spotlight { background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--gold); border-radius: 12px; padding: 18px; }
+      .spotlight h3 { font-size: 1.2rem; margin-bottom: 6px; }
+      .datelist { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px; margin: 14px 0 6px; }
+      .dateitem { background: var(--surface2); border-radius: 10px; padding: 12px 14px; }
+      .dateitem strong { display: block; font-size: .98rem; }
+      .dateitem span { font-size: .84rem; color: var(--muted); }
+      .twocol { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+
+      /* ---------- glove sizing & positions ---------- */
+      .agegrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+      .agecard { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 15px; }
+      .agecard .age { font-family: "Fraunces", Georgia, serif; font-weight: 900; font-size: 1.18rem; display: block; }
+      .agecard .level { font-size: .74rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--red-ink); display: block; margin-bottom: 8px; }
+      .agecard dl { margin: 0; font-size: .88rem; }
+      .agecard dl div { display: flex; justify-content: space-between; gap: 10px; padding: 4px 0; border-top: 1px solid var(--line); }
+      .agecard dt { color: var(--muted); }
+      .agecard dd { margin: 0; font-weight: 800; text-align: right; white-space: nowrap; }
+      .agecard .tip { font-size: .84rem; color: var(--muted); margin-top: 9px; }
+      .posgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+      .poscard { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+      .poscard h3 { font-size: 1.12rem; font-weight: 600; }
+      .poscard .spec { font-size: .84rem; font-weight: 700; color: var(--ink); background: var(--surface2); border-radius: 8px; padding: 8px 10px; }
+      .poscard p { font-size: .92rem; }
+      .poscard .buy { font-size: .9rem; }
+      .poscard .buy strong { color: var(--ok); }
+      .poscard .skip strong { color: var(--red-ink); }
+      .poscard .cardfoot { margin-top: auto; }
+
+      footer.site { border-top: 1px solid var(--line); padding: 22px 0 34px; color: var(--muted); font-size: .85rem; margin-top: 10px; }
+      footer.site .wrap { display: flex; gap: 14px; flex-wrap: wrap; justify-content: space-between; }
+      .empty { background: var(--surface); border: 1px dashed var(--line); border-radius: 12px; padding: 22px; color: var(--muted); }
+    
+      /* split-site additions: nav/tiles are real links now, same look as the buttons */
+      .pages a { flex: none; background: transparent; border: 1px solid transparent; color: #dbe2ec;
+        padding: 7px 12px; border-radius: 999px; font-size: .86rem; font-weight: 600; min-height: 36px;
+        display: inline-flex; align-items: center; text-decoration: none; }
+      .pages a:hover { background: rgba(255,255,255,.1); color: #fff; }
+      .pages a[aria-current="page"] { background: #f3efe3; color: #152a44; }
+      a.btn { display: inline-flex; align-items: center; text-decoration: none; }
+      a.tile { text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap">
+        <div class="brandrow">
+          <div class="ball" aria-hidden="true"></div>
+          <div class="brandname">Hoosier Diamond <span>Directory</span></div>
+          <div class="brandsub">Youth baseball in Indiana — tournaments,<br />training, gear &amp; straight answers</div>
+        </div>
+        <nav class="pages" id="topnav" aria-label="Directory pages"><a href="index.html">Home</a><a href="tournaments.html">Tournaments</a><a href="tournaments-10u.html">10U Tournaments</a><a href="tournaments-12u.html">12U Tournaments</a><a href="player-pool.html">Player Pool</a><a href="cages.html">Cages</a><a href="cages-indianapolis.html">Cages Indianapolis</a><a href="cages-fort-wayne.html">Cages Fort Wayne</a><a href="bats.html">Best Bats</a><a href="best-bat-10u.html">Best Bat 10U</a><a href="best-bat-12u.html">Best Bat 12U</a><a href="bat-sizing.html">Bat Sizing</a><a href="bat-size-7-year-old.html">Bat Size Age 7</a><a href="bat-size-8-year-old.html">Bat Size Age 8</a><a href="bat-size-9-year-old.html">Bat Size Age 9</a><a href="training-tools.html">Training Tools</a><a href="best-training-bat.html">Best Training Bat</a><a href="gloves.html">Best Gloves</a><a href="best-glove-10u.html">Best Glove 10U</a><a href="best-cleats.html">Best Cleats</a><a href="cleats.html">Starter Kit</a><a href="first-season.html">First Season</a><a href="rec-leagues.html" aria-current="page">Rec Leagues</a><a href="bat-rules.html">Bat Rules</a><a href="usssa-vs-usa-bat-rules.html">USSSA vs USA</a><a href="questions.html">Team Questions</a><a href="costs-indiana.html">Cost in Indiana</a><a href="how.html">How It Works</a></nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+
+<section class="page" data-page="rec-leagues">
+        <div class="crumb">Parent guide · Rec leagues</div>
+        <h1 class="pagetitle">Indiana Rec Baseball Leagues: Find One Near You</h1>
+        <p class="lede">Rec baseball is where most Indiana kids start — local games, volunteer coaches, everyone plays, and a season that costs about the same as a pair of cleats. Search the list below by town or county, or use the official finders at the bottom if your town is not listed yet.</p>
+        <div style="height:16px"></div>
+        <p class="note"><strong>117 leagues in 40 counties, checked Nov 28, 2026.</strong> Coverage is partial — Indiana has 92 counties and this list does not have a verified league for all of them yet. If your county is missing, your town very likely still has a league: check the official finders below, or call your local parks &amp; recreation department, which is where most independent leagues live.</p>
+        <section class="block">
+          <h2>Find a rec league near you</h2>
+          <p class="sub">Type a town, league name or county — or pick a county from the list. The table filters as you type. No account, no email, nothing leaves your browser.</p>
+          <div class="searchbar">
+            <input type="search" id="leaguesearch" placeholder="Search by league, town or county…" aria-label="Search leagues" />
+            <select id="countysel" aria-label="Filter by county">
+              <option value="">All counties</option>
+              <option value="Allen">Allen County</option>
+              <option value="Bartholomew">Bartholomew County</option>
+              <option value="Boone">Boone County</option>
+              <option value="Clark">Clark County</option>
+              <option value="Daviess">Daviess County</option>
+              <option value="DeKalb">DeKalb County</option>
+              <option value="Delaware">Delaware County</option>
+              <option value="Dubois">Dubois County</option>
+              <option value="Elkhart">Elkhart County</option>
+              <option value="Floyd">Floyd County</option>
+              <option value="Gibson">Gibson County</option>
+              <option value="Greene">Greene County</option>
+              <option value="Hamilton">Hamilton County</option>
+              <option value="Hancock">Hancock County</option>
+              <option value="Harrison">Harrison County</option>
+              <option value="Hendricks">Hendricks County</option>
+              <option value="Henry">Henry County</option>
+              <option value="Howard">Howard County</option>
+              <option value="Huntington">Huntington County</option>
+              <option value="Jasper">Jasper County</option>
+              <option value="Johnson">Johnson County</option>
+              <option value="Knox">Knox County</option>
+              <option value="Kosciusko">Kosciusko County</option>
+              <option value="Lake">Lake County</option>
+              <option value="Lawrence">Lawrence County</option>
+              <option value="Madison">Madison County</option>
+              <option value="Marion">Marion County</option>
+              <option value="Monroe">Monroe County</option>
+              <option value="Morgan">Morgan County</option>
+              <option value="Newton">Newton County</option>
+              <option value="Porter">Porter County</option>
+              <option value="St. Joseph">St. Joseph County</option>
+              <option value="Starke">Starke County</option>
+              <option value="Tippecanoe">Tippecanoe County</option>
+              <option value="Vanderburgh">Vanderburgh County</option>
+              <option value="Vermillion">Vermillion County</option>
+              <option value="Vigo">Vigo County</option>
+              <option value="Wabash">Wabash County</option>
+              <option value="Warrick">Warrick County</option>
+              <option value="Wayne">Wayne County</option>
+            </select>
+          </div>
+          <div class="chips" role="group" aria-label="Filter by organization">
+            <button class="chipbtn" data-orgfilter="all" aria-pressed="true">All leagues</button>
+            <button class="chipbtn" data-orgfilter="ll" aria-pressed="false">Little League</button>
+            <button class="chipbtn" data-orgfilter="cr" aria-pressed="false">Cal Ripken</button>
+            <button class="chipbtn" data-orgfilter="br" aria-pressed="false">Babe Ruth</button>
+            <button class="chipbtn" data-orgfilter="ind" aria-pressed="false">Independent</button>
+          </div>
+          <p class="resultcount" id="leaguecount"></p>
+          <div style="overflow-x:auto;">
+          <table class="costs" id="leaguetable">
+            <thead><tr><th>League</th><th>City</th><th>County</th><th>Organization</th><th>Ages</th></tr></thead>
+            <tbody>
+              <tr data-org="ll" data-county="Madison"><td><strong>Anderson Youth Baseball &amp; Softball</strong></td><td>Anderson</td><td>Madison</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Morgan"><td><strong>Artesian Little League</strong></td><td>Martinsville</td><td>Morgan</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="DeKalb"><td><strong>Auburn Little League</strong></td><td>Auburn</td><td>DeKalb</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Hendricks"><td><strong>Avon Youth Sports</strong></td><td>Avon</td><td>Hendricks</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Lawrence"><td><strong>Bedford Little League</strong></td><td>Bedford</td><td>Lawrence</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Marion"><td><strong>Beech Grove Little League</strong></td><td>Beech Grove</td><td>Marion</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Marion"><td><strong>Ben Davis Little League</strong></td><td>Indianapolis</td><td>Marion</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Marion"><td><strong>Broad Ripple Haverford Little League</strong></td><td>Indianapolis</td><td>Marion</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Hendricks"><td><strong>Brownsburg Little League</strong></td><td>Brownsburg</td><td>Hendricks</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Lake"><td><strong>Calumet Region Little League</strong></td><td>Gary</td><td>Lake</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Clark"><td><strong>Charlestown Little League</strong></td><td>Charlestown</td><td>Clark</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="St. Joseph"><td><strong>Chet Waggoner Little League</strong></td><td>South Bend</td><td>St. Joseph</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Daviess"><td><strong>Chuck Harmon Little League</strong></td><td>Washington</td><td>Daviess</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Elkhart"><td><strong>Cleveland Township Little League</strong></td><td>Elkhart</td><td>Elkhart</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Vermillion"><td><strong>Clinton Little League</strong></td><td>Clinton</td><td>Vermillion</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Hendricks"><td><strong>Danville Little League</strong></td><td>Danville</td><td>Hendricks</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Delaware"><td><strong>Delta Little League</strong></td><td>Muncie</td><td>Delaware</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Jasper"><td><strong>DeMotte Little League</strong></td><td>DeMotte</td><td>Jasper</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Allen"><td><strong>Don Ayres Little League</strong></td><td>Fort Wayne</td><td>Allen</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Marion"><td><strong>Douglass Little League</strong></td><td>Indianapolis</td><td>Marion</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Lake"><td><strong>Dyer Little League</strong></td><td>Dyer</td><td>Lake</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Marion"><td><strong>Eagle Creek Little League</strong></td><td>Indianapolis</td><td>Marion</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Marion"><td><strong>Eagledale Little League</strong></td><td>Indianapolis</td><td>Marion</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Lake"><td><strong>East Chicago Little League</strong></td><td>East Chicago</td><td>Lake</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Elkhart"><td><strong>Elkhart FOP 52 Little League</strong></td><td>Elkhart</td><td>Elkhart</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Allen"><td><strong>Elmhurst Little League</strong></td><td>Fort Wayne</td><td>Allen</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Floyd"><td><strong>FC Little League</strong></td><td>Georgetown</td><td>Floyd</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Allen"><td><strong>Foster Park Little League</strong></td><td>Fort Wayne</td><td>Allen</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Johnson"><td><strong>Franklin Little League</strong></td><td>Franklin</td><td>Johnson</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Marion"><td><strong>Franklin Township Little League</strong></td><td>Indianapolis</td><td>Marion</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Allen"><td><strong>Georgetown Community Little League</strong></td><td>Fort Wayne</td><td>Allen</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Vanderburgh"><td><strong>Golfmoor Little League</strong></td><td>Evansville</td><td>Vanderburgh</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Elkhart"><td><strong>Goshen Little League</strong></td><td>Goshen</td><td>Elkhart</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Greene"><td><strong>Greene County Little League</strong></td><td>Bloomfield</td><td>Greene</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Johnson"><td><strong>Greenwood Little League</strong></td><td>Greenwood</td><td>Johnson</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Wayne"><td><strong>Hagerstown Little League</strong></td><td>Hagerstown</td><td>Wayne</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Allen"><td><strong>Hamilton Park Little League</strong></td><td>Fort Wayne</td><td>Allen</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Madison"><td><strong>Harry Bridges Little League</strong></td><td>Elwood</td><td>Madison</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Porter"><td><strong>Hebron Little League</strong></td><td>Hebron</td><td>Porter</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Lake"><td><strong>Hessville Little League</strong></td><td>Hammond</td><td>Lake</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Lake"><td><strong>Highland Little League</strong></td><td>Highland</td><td>Lake</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Lake"><td><strong>Hobart Little League</strong></td><td>Hobart</td><td>Lake</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Huntington"><td><strong>Huntington County Baseball Little League</strong></td><td>Huntington</td><td>Huntington</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Marion"><td><strong>Indiana Central Little League</strong></td><td>Indianapolis</td><td>Marion</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Marion"><td><strong>Irvington Little League</strong></td><td>Indianapolis</td><td>Marion</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Dubois"><td><strong>Jasper National Little League</strong></td><td>Jasper</td><td>Dubois</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Clark"><td><strong>Jeff/GRC Little League</strong></td><td>Jeffersonville</td><td>Clark</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Starke"><td><strong>Knox Little League</strong></td><td>Knox</td><td>Starke</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Boone"><td><strong>Lebanon Little League</strong></td><td>Lebanon</td><td>Boone</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Lake"><td><strong>Lakes of the Four Seasons–Winfield (LOFS) Little League</strong></td><td>Crown Point</td><td>Lake</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Marion"><td><strong>Lowell Little League</strong></td><td>Indianapolis</td><td>Marion</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Elkhart"><td><strong>Middlebury Little League</strong></td><td>Middlebury</td><td>Elkhart</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Lake"><td><strong>Munster Little League</strong></td><td>Munster</td><td>Lake</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Floyd"><td><strong>New Albany Little League</strong></td><td>New Albany</td><td>Floyd</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Henry"><td><strong>New Castle Little League</strong></td><td>New Castle</td><td>Henry</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Allen"><td><strong>New Haven Baseball Association</strong></td><td>New Haven</td><td>Allen</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Harrison"><td><strong>North Harrison Youth Baseball</strong></td><td>Palmyra</td><td>Harrison</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Elkhart"><td><strong>Osolo Little League</strong></td><td>Elkhart</td><td>Elkhart</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Newton"><td><strong>Roselawn Little League</strong></td><td>Roselawn</td><td>Newton</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Delaware"><td><strong>Ross Center Little League</strong></td><td>Muncie</td><td>Delaware</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Clark"><td><strong>Silver Creek Little League</strong></td><td>Sellersburg</td><td>Clark</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Monroe"><td><strong>Smithville Diamonds Little League</strong></td><td>Bloomington</td><td>Monroe</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="St. Joseph"><td><strong>South Bend Southeast Little League</strong></td><td>South Bend</td><td>St. Joseph</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Porter"><td><strong>South Haven Little League</strong></td><td>Valparaiso</td><td>Porter</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Knox"><td><strong>South Knox Youth Little League</strong></td><td>Monroe City</td><td>Knox</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Marion"><td><strong>Southport Little League</strong></td><td>Indianapolis</td><td>Marion</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="St. Joseph"><td><strong>Southside Little League</strong></td><td>South Bend</td><td>St. Joseph</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Marion"><td><strong>Speedway Little League</strong></td><td>Speedway</td><td>Marion</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Allen"><td><strong>St. Joe Central Little League</strong></td><td>Fort Wayne</td><td>Allen</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Porter"><td><strong>State Park Little League</strong></td><td>Porter</td><td>Porter</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Vigo"><td><strong>Terre Haute North Little League</strong></td><td>Terre Haute</td><td>Vigo</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Hendricks"><td><strong>Tri-West Little League</strong></td><td>Pittsboro</td><td>Hendricks</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Wabash"><td><strong>Wabash Little League</strong></td><td>Wabash</td><td>Wabash</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="St. Joseph"><td><strong>Warren Township Little League</strong></td><td>South Bend</td><td>St. Joseph</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Kosciusko"><td><strong>Warsaw Little League</strong></td><td>Warsaw</td><td>Kosciusko</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Marion"><td><strong>Washington Township Little League</strong></td><td>Indianapolis</td><td>Marion</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Vigo"><td><strong>West Terre Haute Little League</strong></td><td>West Terre Haute</td><td>Vigo</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Jasper"><td><strong>Wheatfield Little League</strong></td><td>Wheatfield</td><td>Jasper</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Porter"><td><strong>Wheeler Little League</strong></td><td>Valparaiso</td><td>Porter</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Lake"><td><strong>Whiting Little League</strong></td><td>Whiting</td><td>Lake</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="ll" data-county="Boone"><td><strong>Zionsville Little League</strong></td><td>Zionsville</td><td>Boone</td><td>Little League</td><td>4–16</td></tr>
+              <tr data-org="cr" data-county="Lake"><td><strong>Crown Point Cal Ripken Youth Baseball</strong></td><td>Crown Point</td><td>Lake</td><td>Cal Ripken</td><td>4–12</td></tr>
+              <tr data-org="crbr" data-county="Porter"><td><strong>Portage Cal Ripken / Babe Ruth</strong></td><td>Portage</td><td>Porter</td><td>Cal Ripken + Babe Ruth</td><td>4–18</td></tr>
+              <tr data-org="br" data-county="Porter"><td><strong>Liberty Rec Babe Ruth League</strong></td><td>Chesterton</td><td>Porter</td><td>Babe Ruth</td><td>4–16</td></tr>
+              <tr data-org="br" data-county="Lake"><td><strong>Hammond Optimist Youth Sports</strong></td><td>Hammond</td><td>Lake</td><td>Babe Ruth</td><td>4–18</td></tr>
+              <tr data-org="crbr" data-county="Vanderburgh"><td><strong>McCutchanville Cal Ripken / Babe Ruth</strong></td><td>McCutchanville</td><td>Vanderburgh</td><td>Cal Ripken + Babe Ruth</td><td>4–18</td></tr>
+              <tr data-org="br" data-county="Gibson"><td><strong>South Gibson Babe Ruth</strong></td><td>Gibson County</td><td>Gibson</td><td>Babe Ruth</td><td>13–18</td></tr>
+              <tr data-org="br" data-county="Warrick"><td><strong>Newburgh Babe Ruth</strong></td><td>Newburgh</td><td>Warrick</td><td>Babe Ruth</td><td>13–18</td></tr>
+              <tr data-org="br" data-county="Porter"><td><strong>Duneland Diamond Baseball</strong></td><td>Chesterton</td><td>Porter</td><td>Babe Ruth</td><td>13–18</td></tr>
+              <tr data-org="br" data-county="Howard"><td><strong>Kokomo Parents Babe Ruth</strong></td><td>Kokomo</td><td>Howard</td><td>Babe Ruth</td><td>13–18</td></tr>
+              <tr data-org="ind" data-county="Tippecanoe"><td><strong>Lafayette Youth Baseball</strong></td><td>Lafayette</td><td>Tippecanoe</td><td>Independent</td><td>4–12</td></tr>
+              <tr data-org="ind" data-county="Tippecanoe"><td><strong>Mintonye-Southwestern Summer Rec</strong></td><td>Lafayette</td><td>Tippecanoe</td><td>Independent</td><td>4–12</td></tr>
+              <tr data-org="ind" data-county="Tippecanoe"><td><strong>Lafayette Sporties for Shorties</strong></td><td>Lafayette</td><td>Tippecanoe</td><td>Independent</td><td>4–6</td></tr>
+              <tr data-org="ind" data-county="Vanderburgh"><td><strong>North Youth Baseball</strong></td><td>Evansville</td><td>Vanderburgh</td><td>Independent</td><td>4–12</td></tr>
+              <tr data-org="ind" data-county="Marion"><td><strong>Allisonville Youth Baseball-Softball</strong></td><td>Indianapolis</td><td>Marion</td><td>Independent</td><td>4–16</td></tr>
+              <tr data-org="ind" data-county="Marion"><td><strong>Oaklandon Youth Organization</strong></td><td>Indianapolis</td><td>Marion</td><td>Independent</td><td>4–16</td></tr>
+              <tr data-org="ind" data-county="Marion"><td><strong>Skiles Test Baseball League</strong></td><td>Indianapolis</td><td>Marion</td><td>Independent</td><td>4–16</td></tr>
+              <tr data-org="ind" data-county="Allen"><td><strong>Washington Township Baseball League</strong></td><td>Fort Wayne</td><td>Allen</td><td>Independent</td><td>4–16</td></tr>
+              <tr data-org="ind" data-county="Bartholomew"><td><strong>Columbus Parks &amp; Recreation Youth Baseball</strong></td><td>Columbus</td><td>Bartholomew</td><td>Independent</td><td>4–12</td></tr>
+              <tr data-org="ind" data-county="Porter"><td><strong>Kouts Youth Baseball League</strong></td><td>Kouts</td><td>Porter</td><td>Independent</td><td>4–12</td></tr>
+              <tr data-org="ind" data-county="Porter"><td><strong>Portage Youth Baseball Inc.</strong></td><td>Portage</td><td>Porter</td><td>Independent</td><td>4–12</td></tr>
+              <tr data-org="ind" data-county="Porter"><td><strong>Portage Parks &amp; Recreation</strong></td><td>Portage</td><td>Porter</td><td>Independent</td><td>4–12</td></tr>
+              <tr data-org="ind" data-county="Porter"><td><strong>Chesterton Parks &amp; Recreation</strong></td><td>Chesterton</td><td>Porter</td><td>Independent</td><td>4–12</td></tr>
+              <tr data-org="ind" data-county="Marion"><td><strong>Indy Parks and Recreation Baseball</strong></td><td>Indianapolis</td><td>Marion</td><td>Independent</td><td>4–12</td></tr>
+              <tr data-org="ind" data-county="Monroe"><td><strong>Bloomington Junior League Baseball Association</strong></td><td>Bloomington</td><td>Monroe</td><td>Independent</td><td>5–12</td></tr>
+              <tr data-org="ind" data-county="Monroe"><td><strong>Monroe County Senior League Baseball Association</strong></td><td>Bloomington</td><td>Monroe</td><td>Independent</td><td>13–19</td></tr>
+              <tr data-org="ind" data-county="Monroe"><td><strong>Ellettsville Youth Sports</strong></td><td>Ellettsville</td><td>Monroe</td><td>Independent</td><td>4–12</td></tr>
+              <tr data-org="ind" data-county="Monroe"><td><strong>Richland Bean-Blossom Youth Baseball</strong></td><td>Bloomington</td><td>Monroe</td><td>Independent</td><td>4–12</td></tr>
+              <tr data-org="ind" data-county="Howard"><td><strong>Kokomo United Baseball &amp; Softball (KUBS)</strong></td><td>Kokomo</td><td>Howard</td><td>Independent</td><td>5–15</td></tr>
+              <tr data-org="ind" data-county="Howard"><td><strong>Russiaville Youth Baseball League</strong></td><td>Russiaville</td><td>Howard</td><td>Independent</td><td>4–15</td></tr>
+              <tr data-org="ind" data-county="Howard"><td><strong>Eastern Howard-Greentown JR Baseball League</strong></td><td>Greentown</td><td>Howard</td><td>Independent</td><td>4–15</td></tr>
+              <tr data-org="ind" data-county="Howard"><td><strong>Howard County Cubs</strong></td><td>Kokomo</td><td>Howard</td><td>Independent</td><td>4–16</td></tr>
+              <tr data-org="ind" data-county="Howard"><td><strong>Southside Youth Baseball League</strong></td><td>Kokomo</td><td>Howard</td><td>Independent</td><td>4–12</td></tr>
+              <tr data-org="ind" data-county="Hamilton"><td><strong>Noblesville Youth Baseball</strong></td><td>Noblesville</td><td>Hamilton</td><td>Independent</td><td>4–12</td></tr>
+              <tr data-org="ind" data-county="Hancock"><td><strong>New Palestine Youth League</strong></td><td>New Palestine</td><td>Hancock</td><td>Independent</td><td>4–12</td></tr>
+              <tr data-org="ind" data-county="Hendricks"><td><strong>Avon Junior Athletic Association</strong></td><td>Avon</td><td>Hendricks</td><td>Independent</td><td>4–12</td></tr>
+              <tr data-org="ind" data-county="Johnson"><td><strong>Greenwood Parks Tiny T-Ball</strong></td><td>Greenwood</td><td>Johnson</td><td>Independent</td><td>4–6</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p class="note" style="margin-top:12px;">Ages are the divisions the league is known to offer; the league itself sets exact age cutoffs, and registration usually opens in January and closes in mid-March. Always confirm dates and fees on the league's own site or Facebook page before you pay — search the league name, most run registration through their own site or a Facebook page.</p>
+        </section>
+        <section class="block">
+          <h2>The three kinds of rec baseball</h2>
+          <p class="sub">Most Indiana towns have one of these three. They all play the same game — the difference is who writes the rules and where the all-star path leads.</p>
+          <div class="posgrid">
+            <div class="poscard"><h3>Little League</h3><p class="spec">Ages 4–16 · Tee Ball through Senior League</p><p>The biggest name in rec baseball, and the one most parents have heard of. Divisions run Tee Ball (4–7), Minor and Major (roughly 7–12), then Intermediate, Junior and Senior up to age 16. Your league is set by where you live or go to school — there are boundaries, so use the League Finder below to find yours. The all-star path runs district → state → the Great Lakes Region and, for 12U Majors, the Little League Baseball World Series.</p></div>
+            <div class="poscard"><h3>Babe Ruth / Cal Ripken</h3><p class="spec">Cal Ripken ages 4–12 · Babe Ruth ages 13–18</p><p>One organization, two halves. <strong>Cal Ripken</strong> is the younger half: T-Ball (4–6), Rookie (7–8), Minor (9–10) and Major (11–12), with the popular Major/70 division on 70-foot bases — an easier step up to the full-size field. <strong>Babe Ruth</strong> is the older half, ages 13–18, played on the same 90-foot diamonds as high school ball. If your player ages out of Little League at 12 or 13 and is not ready for travel, Babe Ruth is the natural next stop. Indiana sits in Babe Ruth League's Ohio Valley region.</p></div>
+            <div class="poscard"><h3>Independent community leagues</h3><p class="spec">All ages · Run locally, own rules</p><p>Not every Indiana town has a Little League or a Babe Ruth charter — and plenty of towns do just fine without one. Independent leagues are run by a local parks &amp; recreation department or a volunteer board, with their own rules, their own fields, and usually the lowest fees of the three (often the cheapest option in town). They do not feed into a national all-star tournament, which is exactly why some families prefer them: it is just baseball, close to home, with neighbors. If your town has no affiliated league listed above, your parks &amp; rec department is the first place to ask.</p></div>
+          </div>
+        </section>
+        <section class="block">
+          <h2>Rec vs travel, in one table</h2>
+          <p class="sub">Same sport, very different commitment. Most families should start here and only move to travel when the player asks for more.</p>
+          <table class="costs">
+            <thead><tr><th></th><th>Rec league</th><th>Travel ball</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Cost per season</strong></td><td>Roughly $75–$200, jersey and hat usually included</td><td>$800–$7,000+ all-in, depending on age and how far you travel</td></tr>
+              <tr><td><strong>Schedule</strong></td><td>Spring season, 1–2 games a week, local fields</td><td>Weekends most of the year, plus winter training</td></tr>
+              <tr><td><strong>Tryouts</strong></td><td>No — everyone who signs up gets a team</td><td>Yes — rosters are picked, and cuts happen</td></tr>
+              <tr><td><strong>Playing time</strong></td><td>Everyone plays, by rule</td><td>Playing time is earned and not guaranteed</td></tr>
+              <tr><td><strong>Travel</strong></td><td>Your town and the towns next door</td><td>Across Indiana and beyond, with hotels</td></tr>
+              <tr><td><strong>Coaches</strong></td><td>Volunteer parents, usually</td><td>Paid or semi-paid coaches, often with winter training</td></tr>
+              <tr><td><strong>Best for</strong></td><td>Learning the game, playing with school friends, finding out if your kid loves it</td><td>A player who loves it and wants more games, better competition and a bigger stage</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="block">
+          <div class="prose">
+            <h2>How to pick one</h2>
+            <div class="steps">
+              <div class="step"><span class="num"></span><h3>Start with your address</h3><p>Little League assigns you by where you live or go to school. Check the League Finder first — if it gives you a league, that is your league.</p></div>
+              <div class="step"><span class="num"></span><h3>Ask about ages and cost</h3><p>Ask the league which division fits your player's age, what the fee covers, and what gear you need to buy. Rec fees are usually $75–$200.</p></div>
+              <div class="step"><span class="num"></span><h3>Check the schedule</h3><p>Ask how many nights a week, where games are played, and when the season runs. If it fits your family, it is the right league.</p></div>
+              <div class="step"><span class="num"></span><h3>Sign up early</h3><p>Most rec leagues open registration in January and close in mid-March. Late sign-ups usually mean a waitlist, not a team.</p></div>
+            </div>
+            <h2>Can't find your town?</h2>
+            <p>Three places to check, in order: <strong>(1)</strong> the <a href="https://playlittleleague.org" target="_blank" rel="noopener">Little League League Finder</a> — type your home or school address and it tells you if a Little League covers you. <strong>(2)</strong> <a href="https://www.baberuthleague.org/" target="_blank" rel="noopener">Babe Ruth League</a> — Indiana is in the Ohio Valley region; the site can point you to your state commissioner, who knows every chartered league. <strong>(3)</strong> Your town or county parks &amp; recreation department — if there is an independent league, they run it or know who does. And if your league is missing from this page or listed wrong, <a href="mailto:hoosierdiamonddirector@gmail.com">tell us</a> and we will fix it.</p>
+            <h2>Sources</h2>
+            <p>League names, towns and affiliations checked Nov 28, 2026: the Little League directory (<a href="https://www.getfungo.com/leagues?state=Indiana" target="_blank" rel="noopener">Fungo — 82 Indiana Little League programs</a>), <a href="https://walkuppro.com/leagues/indiana/" target="_blank" rel="noopener">Walkup Pro — Youth Baseball and Softball Leagues in Indiana</a>, Babe Ruth League boundary records for McCutchanville, Crown Point Cal Ripken and the Ohio Valley region, the Indianapolis Indians <a href="https://www.milb.com/indianapolis/community/youth-sports" target="_blank" rel="noopener">Youth Sports Program</a> partner leagues, and local listings for Bloomington and Kokomo. Ages are the divisions each program is known to offer — the league itself is the final word. Cost figures match this site's <a href="costs-indiana.html">Cost in Indiana page</a> and <a href="costs.html">True Cost page</a>.</p>
+          </div>
+        </section>
+        <p style="margin-top:26px;"><a href="first-season.html">First season guide →</a> · <a href="costs-indiana.html">What travel baseball costs in Indiana →</a> · <a href="tournaments.html">Indiana tournaments 2027 →</a></p>
+        <script>
+        (function () {
+          var q = document.getElementById("leaguesearch");
+          var county = document.getElementById("countysel");
+          var count = document.getElementById("leaguecount");
+          var rows = Array.prototype.slice.call(document.querySelectorAll("#leaguetable tbody tr"));
+          var org = "all";
+          function orgMatch(r) {
+            if (org === "all") return true;
+            var o = r.getAttribute("data-org");
+            if (org === "cr") return o === "cr" || o === "crbr";
+            if (org === "br") return o === "br" || o === "crbr";
+            return o === org;
+          }
+          function run() {
+            var needle = q.value.trim().toLowerCase();
+            var c = county.value;
+            var shown = 0;
+            rows.forEach(function (r) {
+              var hay = r.textContent.toLowerCase();
+              var ok = (!needle || hay.indexOf(needle) !== -1) &&
+                       (!c || r.getAttribute("data-county") === c) && orgMatch(r);
+              r.style.display = ok ? "" : "none";
+              if (ok) shown++;
+            });
+            count.textContent = "Showing " + shown + " of " + rows.length + " leagues" + (shown === 0 ? " — try a different town, county or spelling, or check the official finders below." : ".");
+          }
+          q.addEventListener("input", run);
+          county.addEventListener("change", run);
+          Array.prototype.forEach.call(document.querySelectorAll("[data-orgfilter]"), function (b) {
+            b.addEventListener("click", function () {
+              org = b.getAttribute("data-orgfilter");
+              Array.prototype.forEach.call(document.querySelectorAll("[data-orgfilter]"), function (x) {
+                x.setAttribute("aria-pressed", x === b ? "true" : "false");
+              });
+              run();
+            });
+          });
+          run();
+        })();
+        </script>
+      </section>
+    </main>
+
+<footer class="site">
+      <div class="wrap">
+        <span>Hoosier Diamond Directory — now with Covington 2027, more Indiana tournaments, Player Pool, the glove and bat sizing guides, training tools, and new Best Bat for 10U and 12U, Best Glove for 10U, Bat Size for 7-, 8- and 9-Year-Old, Best Cleats, and USSSA vs USA Bat Rules in plain English, and Indiana 10U and 12U Tournaments 2027, and Batting Cages Near Indianapolis and Fort Wayne, and How Much Travel Baseball Costs in Indiana (2027, per age) and Best Training Bat for Youth, and Indiana Rec Baseball Leagues (Little League, Babe Ruth / Cal Ripken and independent community leagues).</span>
+        <span>Contact: <a href="mailto:hoosierdiamonddirector@gmail.com">hoosierdiamonddirector@gmail.com</a> · <a href="https://player-pool.net/" target="_blank" rel="noopener">player-pool.net</a> · <a href="privacy.html">Privacy Policy</a> · <a href="disclosure.html">Affiliate Disclosure</a></span>
+        <span>Listings &amp; prices are typical ranges unless a host fee is shown, verified before anything goes public.</span>
+      </div>
+    </footer>
+  </body>
+</html>

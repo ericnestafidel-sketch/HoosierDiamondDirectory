@@ -23,6 +23,7 @@ team coach-eric, project `hoosier-diamond-directory`).
 - `player-pool.html` — Player Pool (player-pool.net) · `costs.html` — True Cost
 - `costs-indiana.html` — How Much Does Travel Baseball Cost in Indiana? 2027, per age (8U/10U/12U/14U)
 - `best-training-bat.html` — Best Training Bat for Youth (CamWood vs Axe vs overload/underload)
+- `rec-leagues.html` — Indiana Rec Baseball Leagues: Little League, Babe Ruth / Cal Ripken and independent community leagues, searchable by county/city (117 leagues, 40 counties)
 - `how.html` — How It Works (outreach approval queue) · `privacy.html` · `disclosure.html`
 - `sitemap.xml` + `robots.txt`
 
