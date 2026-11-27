@@ -432,8 +432,8 @@
         <section class="block">
           <h2>3 · Picks by age &amp; position — with product links</h2>
           <p class="sub">One proven pick per job, linked to the retailer listing so you can check the current price, sizes and throwing hand (right-hand throw = glove on the left hand). Prices checked late Nov 2026 and move around — the retailer page is the live number.</p>
+          <p style="font-size:.9rem; margin-bottom:12px;"><strong>As an Amazon Associate, Hoosier Diamond Directory earns from qualifying purchases.</strong> Amazon links below are affiliate links — same price for you, small cut to this site if you buy. Other product links go to Dick's Sporting Goods, JustBallGloves, SPC Sports, Kohl's, Rawlings and Wilson and are plain retailer links for now.</p>
           <div class="grid" id="glovegrid"></div>
-          <p style="font-size:.78rem; color:var(--muted); margin-top:10px;">Product links go to Dick's Sporting Goods, JustBallGloves, SPC Sports, Kohl's, Rawlings and Wilson. In the live version these carry the directory's affiliate tag — same price for you, small cut to this site if you buy.</p>
         </section>
 
         <section class="block">
@@ -458,30 +458,41 @@ function pickCard(p) {
         var link = p.url
           ? '<a class="afflink" href="' + p.url + '" target="_blank" rel="noopener sponsored">See it at ' + (p.retailer || 'the retailer') + ' →</a>'
           : '<a class="afflink" href="#">See it at a retailer</a>';
+        var amz = p.amazon
+          ? '<a class="afflink" href="' + p.amazon + '" target="_blank" rel="noopener sponsored">Also on Amazon →</a>'
+          : '';
         var ages = p.ages ? '<p class="meta">' + p.ages + '</p>' : '';
+        var note = p.amazon
+          ? 'Amazon link is an affiliate link — same price for you, small cut to this site if you buy.'
+          : 'Retailer link — same price for you, no cut to this site yet.';
         return '<article class="card pick"><div><span class="tag">' + p.badge + '</span></div><h3>' + p.name + '</h3>' + ages +
-          '<p class="why">' + p.why + '</p><div class="cardfoot"><span class="price">' + p.price + '</span>' + link + '</div>' +
-          '<span class="affnote">Affiliate link — same price for you, small cut to this site if you buy.</span></article>';
+          '<p class="why">' + p.why + '</p><div class="cardfoot"><span class="price">' + p.price + '</span>' + link + amz + '</div>' +
+          '<span class="affnote">' + note + '</span></article>';
       }
 
       var GLOVES = [
         { badge: "Tee Ball · 9.5″", name: "Franklin Sports RTP Tee Ball Glove & Ball Set", price: "$24.99", retailer: "Kohl's", ages: "Best for: Ages 4–6 · Any position",
           url: "https://www.kohls.com/product/prd-7519124/franklin-sports-rtp-95-in-teeball-glove-ball-set.jsp?skuid=62923051",
+          amazon: "https://www.amazon.com/dp/B013LQBMNI?tag=hoosierdiamon-20",
           why: "Light, soft and ready to play with a foam ball included. For a 5-year-old, closing the glove at all is the skill — this one lets them. Don't spend more until 8U." },
         { badge: "Infield / Utility · 10.5″", name: "Mizuno Prospect PowerClose 10.5″", price: "$49.95", retailer: "SPC Sports", ages: "Best for: Ages 7–8 · Infield or everywhere",
           url: "https://spcsports.com/products/mizuno-prospect-powerclose-10-1-2-baseball-glove-gpp1050y3ry",
+          amazon: "https://www.amazon.com/dp/B07DLJDH8Y?tag=hoosierdiamon-20",
           why: "The PowerClose notch genuinely helps smaller hands squeeze the ball shut — a real feature, not marketing. The right first “real leather” glove for coach-pitch ages." },
         { badge: "Infield · 10.5″", name: "Rawlings Highlight Series 10.5″", price: "$54.99", retailer: "Dick's Sporting Goods", ages: "Best for: Ages 7–10 · Infield",
           url: "https://www.dickssportinggoods.com/p/rawlings-10-5-youth-highlight-series-usa-baseball-glove-26rawbbase4t0yybzfzeq/26rawbbase4t0yybzfzeq?sku=28495188",
           why: "Sure Catch heel makes it easy to close, with a shallow youth pocket that teaches quick transfers instead of trapping the ball deep. A step up from tee-ball softness without a step up in stiffness." },
         { badge: "Infield · 11″", name: "Wilson A500 11″ Youth Glove", price: "$74.99", retailer: "Dick's Sporting Goods", ages: "Best for: Ages 8–10 · Infield (works outfield too)",
           url: "https://www.dickssportinggoods.com/p/wilson-11-youth-a500-series-glove-24wily500bsbll11rbgl/24wily500bsbll11rbgl?enteredSearchTerm=wilson a500 11",
+          amazon: "https://www.amazon.com/dp/B0D8929LPL?tag=hoosierdiamon-20",
           why: "Top-grain leather that breaks in fast, with shorter finger stalls and a self-adjusting wrist for youth hands. The default 10U infield pick — sized right for the 10.75″–11.5″ window." },
         { badge: "Infield · 11″", name: "Rawlings Sure Catch 11″ Youth Glove", price: "$40–$50", retailer: "Rawlings.com", ages: "Best for: Ages 8–12 · Infield",
           url: "https://www.rawlings.com/product/SC110BGH-0%2F3.html",
+          amazon: "https://www.amazon.com/dp/B07VDFZ7C9?tag=hoosierdiamon-20",
           why: "Rawlings' easy-close youth line, with the size chart printed right on the product page: 10.25″–11.5″ is their youth infield range. Good budget leather alternative to the A500." },
         { badge: "Outfield / Utility · 11.5″", name: "Rawlings Select Pro Lite 11.5″", price: "$79.95", retailer: "JustBallGloves", ages: "Best for: Ages 9–12 · Outfield, pitcher or utility",
           url: "https://www.justballgloves.com/product/rawlings-select-pro-lite-11-5--youth-baseball-glove--spl150bbcb/39174/",
+          amazon: "https://www.amazon.com/dp/B08K9DSQZ6?tag=hoosierdiamon-20",
           why: "90% broken-in from the factory, youth pro-taper fit, and enough length (11.5″) for the outfield without being a sail in the infield. The one-glove pick for 11U–12U players who rotate." },
         { badge: "First Base Mitt · 11.5″", name: "Rawlings Renegade 11.5″ Youth First Base Mitt", price: "$79.95", retailer: "JustBallGloves", ages: "Best for: Ages 8–12 · First base only",
           url: "https://www.justballgloves.com/product/rawlings-renegade-11-5--youth-baseball-first-base-mitt--r115fbm/30547/",

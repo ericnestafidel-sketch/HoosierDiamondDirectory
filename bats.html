@@ -336,10 +336,16 @@ function pickCard(p) {
         var link = p.url
           ? '<a class="afflink" href="' + p.url + '" target="_blank" rel="noopener sponsored">See it at ' + (p.retailer || 'the retailer') + ' →</a>'
           : '<a class="afflink" href="#">See it at a retailer</a>';
+        var amz = p.amazon
+          ? '<a class="afflink" href="' + p.amazon + '" target="_blank" rel="noopener sponsored">Also on Amazon →</a>'
+          : '';
         var ages = p.ages ? '<p class="meta">' + p.ages + '</p>' : '';
+        var note = p.amazon
+          ? 'Amazon link is an affiliate link — same price for you, small cut to this site if you buy.'
+          : 'Retailer link — same price for you, no cut to this site yet.';
         return '<article class="card pick"><div><span class="tag">' + p.badge + '</span></div><h3>' + p.name + '</h3>' + ages +
-          '<p class="why">' + p.why + '</p><div class="cardfoot"><span class="price">' + p.price + '</span>' + link + '</div>' +
-          '<span class="affnote">Affiliate link — same price for you, small cut to this site if you buy.</span></article>';
+          '<p class="why">' + p.why + '</p><div class="cardfoot"><span class="price">' + p.price + '</span>' + link + amz + '</div>' +
+          '<span class="affnote">' + note + '</span></article>';
       }
 
       var BATS = [
