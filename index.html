@@ -300,7 +300,7 @@
           <div class="brandsub">Youth baseball in Indiana — tournaments,<br />training, gear &amp; straight answers</div>
         </div>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="topnav">☰ Menu</button>
-        <nav class="pages" id="topnav" aria-label="Directory pages"><a href="index.html" aria-current="page">Home</a><a href="tournaments.html">Tournaments</a><a href="tournaments-10u.html">10U Tournaments</a><a href="tournaments-12u.html">12U Tournaments</a><a href="cages.html">Cages Near Me</a><a href="bats.html">Bats</a><a href="training-tools.html">Training Tools</a><a href="gloves.html">Best Gloves</a><a href="best-glove-10u.html">Best Glove 10U</a><a href="best-cleats.html">Best Cleats</a><a href="cleats.html">Starter Kit</a><a href="first-season.html">First Season</a><a href="rec-leagues.html">Rec Leagues</a><a href="questions.html">Team Questions</a><a href="costs-indiana.html">Cost in Indiana</a><a href="player-pool.html">Player Pool</a><a href="how.html">How It Works</a></nav>
+        <nav class="pages" id="topnav" aria-label="Directory pages"><a href="index.html" aria-current="page">Home</a><a href="tournaments.html">Tournaments</a><a href="cages.html">Cages Near Me</a><a href="bats.html">Bats</a><a href="training-tools.html">Training Tools</a><a href="gloves.html">Best Gloves</a><a href="best-glove-10u.html">Best Glove 10U</a><a href="best-cleats.html">Best Cleats</a><a href="cleats.html">Starter Kit</a><a href="first-season.html">First Season</a><a href="rec-leagues.html">Rec Leagues</a><a href="questions.html">Team Questions</a><a href="costs-indiana.html">Cost in Indiana</a><a href="player-pool.html">Player Pool</a><a href="how.html">How It Works</a></nav>
       </div>
     </header>
 
@@ -332,7 +332,11 @@
           </div>
         </div>
 
-        <div class="tiles" id="hometiles"></div>
+        <section class="block">
+          <h2>Featured gear guides</h2>
+          <p class="sub">The buying guides parents ask for most — bats, gloves, cleats, and the training gear that actually gets used. Everything else on the site is one search away, or in the menu above.</p>
+          <div class="tiles" id="hometiles"></div>
+        </section>
 
         <section class="block">
           <h2>Start with the pages parents actually search for</h2>
@@ -388,13 +392,13 @@
         { id: "disclosure", url: "disclosure.html", label: "None", title: "Affiliate Disclosure | Hoosier Diamond Directory", blurb: "How Hoosier Diamond Directory earns from gear links — and what it does not earn yet.", keys: "disclosure" }
       ];
       var tiles = document.getElementById("hometiles");
-      var tileTotal = 25;
-      PAGES.forEach(function (p, i) {
-        if (["home","how","privacy","disclosure"].indexOf(p.id) !== -1) return;
-        var n = tiles.querySelectorAll(".tile").length + 1;
+      var FEATURED = ["bats", "gloves", "best-cleats", "training-tools", "best-training-bat", "bat-sizing"];
+      FEATURED.forEach(function (id) {
+        var p = PAGES.filter(function (x) { return x.id === id; })[0];
+        if (!p) return;
         var a = document.createElement("a");
         a.className = "tile"; a.href = p.url;
-        a.innerHTML = '<span class="n">Page ' + n + ' of ' + tileTotal + '</span><span class="t"></span><span class="d"></span>';
+        a.innerHTML = '<span class="n">Featured</span><span class="t"></span><span class="d"></span>';
         a.querySelector(".t").textContent = p.title;
         a.querySelector(".d").textContent = p.blurb;
         tiles.appendChild(a);
