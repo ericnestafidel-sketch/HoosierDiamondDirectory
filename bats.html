@@ -341,18 +341,18 @@
           <table class="costs">
             <thead><tr><th>Age</th><th>Drop</th><th>Typical price</th></tr></thead>
             <tbody>
-              <tr><td>7</td><td>-12</td><td class="amt">~$51&ndash;$76</td></tr>
-              <tr><td>8</td><td>-11</td><td class="amt">~$51&ndash;$76</td></tr>
-              <tr><td>9</td><td>-10 to -11</td><td class="amt">~$51&ndash;$110</td></tr>
+              <tr><td>7</td><td>-12</td><td class="amt">~$76&ndash;$120</td></tr>
+              <tr><td>8</td><td>-11</td><td class="amt">~$76&ndash;$120</td></tr>
+              <tr><td>9</td><td>-10 to -11</td><td class="amt">~$90&ndash;$150</td></tr>
               <tr><td>10U (ages 9&ndash;10)</td><td>-10</td><td class="amt">~$112&ndash;$350</td></tr>
-              <tr><td>12U (ages 11&ndash;12)</td><td>-8</td><td class="amt">~$150&ndash;$400</td></tr>
+              <tr><td>12U (ages 11&ndash;12)</td><td>-10 or -8</td><td class="amt">~$150&ndash;$400</td></tr>
             </tbody>
           </table>
           <p class="affnote">Drops and prices as listed on each guide, Nov 2026 &mdash; confirm the stamp with your league before buying.</p>
           <h3>Best by age</h3>
           <ul>
             <li><a href="best-bat-10u.html">Best Bat 10U</a> — the top bats for 10U players, USSSA and USA.</li>
-            <li><a href="best-bat-8u.html">Best Bat 8U</a> — the top bats for 8U players, USA only, drop -12 and -11.</li>
+            <li><a href="best-bat-8u.html">Best Bat 8U</a> — the top bats for 8U players, USA and USSSA, drop -12 and -11.</li>
             <li><a href="best-bat-12u.html">Best Bat 12U</a> — the top bats for 12U, including the step up to a &minus;8 drop.</li>
           </ul>
           <h3>Sizing</h3>
@@ -417,8 +417,8 @@ function pickCard(p) {
         { badge: "USSSA · 8U–10U", name: "Marucci CATX2 Junior Big Barrel (−10)", price: "$150–$200", url: "https://www.dickssportinggoods.com/p/marucci-catx-2-alloy-23-4-usssa-bat-2025-10-24mccbctx2lly1023bbb/24mccbctx2lly1023bbb", retailer: "Dick's", why: "The one-piece alloy most Indiana travel kids end up swinging: balanced, durable, and legal everywhere USSSA is played." },
         { badge: "USSSA · 11U–12U", name: "Louisville Slugger Atlas (−8 / −10)", price: "$200–$300", url: "https://www.dickssportinggoods.com/p/louisville-slugger-atlas-23-4-jr-big-barrel-usssa-bat-2026-10-25loubbasetlsjbbssaee/25loubbasetlsjbbssaee", retailer: "Dick's", why: "A step-up alloy with a bigger barrel for players moving to 46/60 and 50/70 fields, without jumping to composite prices." },
         { badge: "USA Baseball · Rec", name: "Rawlings 5150 USA (−11 / −10)", price: "$60–$100", amazon: "https://www.amazon.com/dp/B08KBDW1DF?tag=hoosierdiamon-20", why: "The rec-league workhorse. USA-stamped for Little League and Cal Ripken play, light enough for small hands to control." },
-        { badge: "USA Baseball · Value", name: "Easton Typhoon USA (−12)", price: "$30–$50", amazon: "https://www.amazon.com/dp/B09BG3Y9MK?tag=hoosierdiamon-20", why: "The right first bat for a 6–8 year old: cheap, light, and stamped — buy the next size up next season instead of over-buying now." },
-        { badge: "BBCOR · 14U+", name: "DeMarini Voodoo One BBCOR (−3)", price: "$250–$350", amazon: "https://www.amazon.com/dp/B0F7J1MQYN?tag=hoosierdiamon-20", why: "For the jump to high school rules: one-piece alloy, honest feedback on mishits, and it lasts through JV and beyond." },
+        { badge: "USA Baseball · Value", name: "Easton Typhoon USA (−12)", price: "$85–$100", amazon: "https://www.amazon.com/dp/B09BG3Y9MK?tag=hoosierdiamon-20", why: "The right first bat for a 6–8 year old: cheap, light, and stamped — buy the next size up next season instead of over-buying now." },
+        { badge: "BBCOR · 14U+", name: "DeMarini Voodoo One BBCOR (−3)", price: "$200–$250", amazon: "https://www.amazon.com/dp/B0F7J1MQYN?tag=hoosierdiamon-20", why: "For the jump to high school rules: one-piece alloy, honest feedback on mishits, and it lasts through JV and beyond." },
         { badge: "Tee Ball", name: "Franklin Sports MLB Tee Ball Bat", price: "$20–$30", why: "USA Baseball tee-ball stamped and light enough for a kindergartner. At this age, if it makes them want to swing, it's the right bat." }
       ];
       document.getElementById("batgrid").innerHTML = BATS.map(pickCard).join("");
