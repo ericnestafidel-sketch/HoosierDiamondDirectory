@@ -352,19 +352,19 @@
         </section>
 
         <section class="block">
-          <h2>What this draft is — and how it keeps growing</h2>
+          <h2>What this directory is — and how it keeps growing</h2>
           <div class="prose">
-            <p>It started as 10 pages: a home page, two live directories (tournaments and training), three gear guides, and four parent guides. It grows the way you asked — <strong>just tell us what to add and it gets posted</strong>: this round added Covington's four 2027 weekends, a dozen more Indiana tournaments (Columbus indoor, Brownsburg, Lafayette, Kokomo, Michigan City, Greenwood &amp; more — 22 tournament listings in total now), and a full Player Pool page for player-pool.net.</p>
-            <p>Fees and prices are typical ranges for Indiana youth baseball unless a host has published a specific 2026–27 fee, in which case the listing says so and links to the source. Every listing gets verified before anything goes public — this is the shape of the thing, not the finished site.</p>
+            <p>It started as 10 pages: a home page, two live directories (tournaments and training), three gear guides, and four parent guides. It keeps growing — <strong>just tell us what to add and it gets posted</strong>: the directory now has 39 pages, including 28 unique 2027 tournament listings, a full rec-leagues directory, and a Player Pool page for player-pool.net.</p>
+            <p>Fees and prices are typical ranges for Indiana youth baseball unless a host has published a specific 2027 fee, in which case the listing says so and links to the source. Every listing gets verified before anything goes public.</p>
             <p>The honest expectations from the playbook this is based on: month one is traffic, month three is the first real money — a few hundred dollars, not a salary. The value is that the pages keep working after they're written.</p>
           </div>
         </section>
 
         <section class="block">
-          <h2>Where should this go live? Vercel makes sense</h2>
+          <h2>Where it lives: Vercel</h2>
           <div class="prose">
-            <p><strong>Recommendation: yes, Vercel — when you're ready to publish.</strong> This draft is a single static page with no server or database, which is exactly what Vercel hosts well for free, and it's the same home as your other baseball sites: CoachEric is on Vercel and Player Pool (player-pool.net) runs on Vercel with its own domain. Keeping the directory there means one login, one deploy flow, and an easy path to a real domain or subdomain later.</p>
-            <p>Nothing about the draft changes if you choose Vercel — publishing is just: put this page in a Vercel project, attach a domain when you pick one, and submit the pages to Google Search Console so the tournament and Player Pool pages can start ranking. Until you say “publish,” it stays a private draft here and nobody finds it on Google.</p>
+            <p><strong>The directory is live on Vercel.</strong> The directory is a single static site with no server or database, which is exactly what Vercel hosts well for free. Player Pool (player-pool.net) runs there too, so the two sites share one login and one deploy flow, with an easy path to a real domain or subdomain later.</p>
+            <p>The site is live now at hoosier-diamond-directory.vercel.app, with a sitemap submitted to Google Search Console so the tournament and Player Pool pages can start ranking. A real domain can be attached later.</p>
           </div>
         </section>
       </section>
@@ -381,13 +381,13 @@
 /* ---------------- outreach approval queue ---------------- */
       var DRAFTS = [
         { to: "CLR Tournament Directors / Covington Boys Baseball League — Chuck Robinson", subject: "Confirming your Covington 2027 listing in the directory",
-          body: "Hi Chuck — I've added Covington's 2027 summer series (Swing For The Fences May 1–2, May Madness May 15–16, June Jamboree June 19–20, Summer Heat July 10–11, $450/team at City Park) to our Indiana youth baseball directory from your Nov 20 schedule post. Can you confirm the age divisions for each weekend and the best registration contact to link? Happy to correct anything and add a direct entry link. — Eric, Hoosier Diamond Directory" },
+          body: "Hi Chuck — I've added Covington's 2027 summer series (Swing For The Fences May 1–2, May Madness May 15–16, June Jamboree June 19–20, Summer Heat July 10–11, $450/team at City Park) to our Indiana youth baseball directory from your Nov 20 schedule post. Can you confirm the age divisions for each weekend and the best registration contact to link? Happy to correct anything and add a direct entry link. — Hoosier Diamond Directory" },
         { to: "Bullpen Tournaments — Grand Park, Westfield", subject: "Referral partnership for the Indiana tournament directory",
-          body: "Hi — I run a small directory that sends Indiana baseball families to tournament listings all season. I'd like to talk about a referral link on your listing: families register through it, you get tracked sign-ups, the directory earns a small referral fee. Happy to start with one event and show you the traffic numbers first. — Eric" },
+          body: "Hi — I run a small directory that sends Indiana baseball families to tournament listings all season. I'd like to talk about a referral link on your listing: families register through it, you get tracked sign-ups, the directory earns a small referral fee. Happy to start with one event and show you the traffic numbers first. — Hoosier Diamond Directory" },
         { to: "Regional sporting goods retailer — affiliate program", subject: "Joining your affiliate program (youth baseball gear guides)",
-          body: "Hello — I publish youth baseball gear guides (bats, gloves, starter kits) read by Indiana parents. I'd like to join your affiliate program so the guides can link to your store. Links are labeled as affiliate links on the page, and I only recommend gear I'd hand a player myself. — Eric" },
+          body: "Hello — I publish youth baseball gear guides (bats, gloves, starter kits) read by Indiana parents. I'd like to join your affiliate program so the guides can link to your store. Links are labeled as affiliate links on the page, and I only recommend gear I'd hand a player myself. — Hoosier Diamond Directory" },
         { to: "D-BAT Indianapolis area — facility listing", subject: "Featured listing for winter training pages",
-          body: "Hi — my Indiana youth baseball directory has a winter training page that families use to find cages and lessons. I'd like to offer your facility a featured listing (photos, membership details, booking link) for a flat monthly rate, starting with a free first month so you can see the clicks before paying anything. — Eric" }
+          body: "Hi — my Indiana youth baseball directory has a winter training page that families use to find cages and lessons. I'd like to offer your facility a featured listing (photos, membership details, booking link) for a flat monthly rate, starting with a free first month so you can see the clicks before paying anything. — Hoosier Diamond Directory" }
       ];
       var queue = document.getElementById("queue");
       DRAFTS.forEach(function (d) {
