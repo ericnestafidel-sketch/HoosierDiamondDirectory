@@ -387,7 +387,7 @@
               <p class="tip">Last youth purchase before adult patterns. Buy real leather now — it should last into high school.</p>
             </div>
           </div>
-          <div class="callout"><strong>The 10-second fit test</strong>Glove on the non-throwing hand: they should be able to (1) close it around a ball with one hand, (2) hold it up without the tip flopping, and (3) get it off without a wrestling match. Fail any one and try a half-inch smaller. *First-base sizes are mitt length; catcher sizes are circumference — that's why the catcher numbers look so much bigger. Charts: <a href="https://www.rawlings.com/product/SC110BGH-0%2F3.html" target="_blank" rel="noopener">Rawlings glove size guide</a> · <a href="https://Www.Academy.com/expert-advice/baseball/how-to-choose-the-right-baseball-glove" target="_blank" rel="noopener">Academy Sports sizing guide</a>.</div>
+          <div class="callout"><strong>The 10-second fit test</strong>Glove on the non-throwing hand: they should be able to (1) close it around a ball with one hand, (2) hold it up without the tip flopping, and (3) get it off without a wrestling match. Fail any one and try a half-inch smaller. *First-base sizes are mitt length; catcher sizes are circumference — that's why the catcher numbers look so much bigger. Charts: <a href="https://www.rawlings.com/product/SC110BGH-0%2F3.html" target="_blank" rel="noopener">Rawlings size chart (on the Sure Catch page)</a> · <a href="https://www.academy.com/expert-advice/baseball/how-to-choose-the-right-baseball-glove" target="_blank" rel="noopener">Academy Sports sizing guide</a>.</div>
         </section>
 
         <section class="block">
@@ -401,7 +401,7 @@
               <p>Infield gloves are the smallest on the field on purpose: a shallow pocket lets the fielder get the ball out and into the throwing hand fast enough to beat the runner. A big, deep glove turns every grounder into a fishing trip.</p>
               <p class="buy"><strong>Buy this if:</strong> your player lives in the infield, or plays a bit of everything — this is also the best one-glove compromise.</p>
               <p class="buy skip"><strong>Skip it if:</strong> they're a primary outfielder chasing fly balls at 11U+ — they'll want the reach below.</p>
-              <div class="cardfoot"><a class="afflink" href="https://www.dickssportinggoods.com/p/wilson-11-youth-a500-series-glove-24wily500bsbll11rbgl/24wily500bsbll11rbgl?enteredSearchTerm=wilson a500 11" target="_blank" rel="noopener sponsored">Example: Wilson A500 11″ at Dick's →</a></div>
+              <div class="cardfoot"><a class="afflink" href="https://www.dickssportinggoods.com/p/wilson-11-youth-a500-series-glove-24wily500bsbll11rbgl/24wily500bsbll11rbgl?enteredSearchTerm=wilson%20a500%2011" target="_blank" rel="noopener sponsored">Example: Wilson A500 11″ at Dick's →</a></div>
             </article>
             <article class="poscard">
               <div><span class="tag red">Outfield</span></div>
@@ -437,7 +437,7 @@
               <p>A catcher's mitt has no individual fingers, the heaviest padding on the field, and a deep round pocket for receiving pitches and blocking balls in the dirt. It's required behind the plate in most leagues — and useless anywhere else on the diamond.</p>
               <p class="buy"><strong>Buy their own if:</strong> they catch every week. Fit and break-in are personal, and a mitt shaped to their hand receives better than the shared team mitt.</p>
               <p class="buy skip"><strong>Use the team mitt if:</strong> they're trying catcher for a few innings — every league stocks a full catcher's set for exactly this.</p>
-              <div class="cardfoot"><a class="afflink" href="https://www.wilson.com/en-us/collections/baseball-catcher-mitts?_ics=1638057600312" target="_blank" rel="noopener sponsored">Example: Wilson A500 32″ mitt at Wilson.com →</a></div>
+              <div class="cardfoot"><a class="afflink" href="https://www.wilson.com/en-us/products/a500-32-youth-baseball-catchers-mitt-wbw102055" target="_blank" rel="noopener sponsored">Example: Wilson A500 32″ mitt at Wilson.com →</a></div>
             </article>
             <article class="poscard">
               <div><span class="tag">Tee ball / First glove</span></div>
@@ -453,7 +453,7 @@
 
         <section class="block">
           <h2>3 · Picks by age &amp; position — with product links</h2>
-          <p class="sub">One proven pick per job, linked to the retailer listing so you can check the current price, sizes and throwing hand (right-hand throw = glove on the left hand). Prices checked late Nov 2026 and move around — the retailer page is the live number.</p>
+          <p class="sub">One proven pick per job, linked to the retailer listing so you can check the current price, sizes and throwing hand (right-hand throw = glove on the left hand). Prices checked Nov 27, 2026 and move around — the retailer page is the live number.</p>
           <p style="font-size:.9rem; margin-bottom:12px;"><strong>As an Amazon Associate, Hoosier Diamond Directory earns from qualifying purchases.</strong> Amazon links below are affiliate links — same price for you, small cut to this site if you buy. Other product links go to Dick's Sporting Goods, JustBallGloves, SPC Sports, Kohl's, Rawlings and Wilson and are plain retailer links for now.</p>
           <div class="grid" id="glovegrid"></div>
         </section>
@@ -479,8 +479,10 @@
 function pickCard(p) {
         var link = p.url
           ? '<a class="afflink" href="' + p.url + '" target="_blank" rel="noopener sponsored">See it at ' + (p.retailer || 'the retailer') + ' →</a>'
-          : '<a class="afflink" href="#">See it at a retailer</a>';
-        var amz = p.amazon
+          : (p.amazon
+            ? '<a class="afflink" href="' + p.amazon + '" target="_blank" rel="noopener sponsored">See it on Amazon →</a>'
+            : '');
+        var amz = (p.amazon && p.url)
           ? '<a class="afflink" href="' + p.amazon + '" target="_blank" rel="noopener sponsored">Also on Amazon →</a>'
           : '';
         var ages = p.ages ? '<p class="meta">' + p.ages + '</p>' : '';
@@ -505,13 +507,13 @@ function pickCard(p) {
           url: "https://www.dickssportinggoods.com/p/rawlings-10-5-youth-highlight-series-usa-baseball-glove-26rawbbase4t0yybzfzeq/26rawbbase4t0yybzfzeq?sku=28495188",
           why: "Sure Catch heel makes it easy to close, with a shallow youth pocket that teaches quick transfers instead of trapping the ball deep. A step up from tee-ball softness without a step up in stiffness." },
         { badge: "Infield · 11″", name: "Wilson A500 11″ Youth Glove", price: "$74.99", retailer: "Dick's Sporting Goods", ages: "Best for: Ages 8–10 · Infield (works outfield too)",
-          url: "https://www.dickssportinggoods.com/p/wilson-11-youth-a500-series-glove-24wily500bsbll11rbgl/24wily500bsbll11rbgl?enteredSearchTerm=wilson a500 11",
+          url: "https://www.dickssportinggoods.com/p/wilson-11-youth-a500-series-glove-24wily500bsbll11rbgl/24wily500bsbll11rbgl?enteredSearchTerm=wilson%20a500%2011",
           amazon: "https://www.amazon.com/dp/B0D8929LPL?tag=hoosierdiamon-20",
           why: "Top-grain leather that breaks in fast, with shorter finger stalls and a self-adjusting wrist for youth hands. The default 10U infield pick — sized right for the 10.75″–11.5″ window." },
-        { badge: "Infield · 11″", name: "Rawlings Sure Catch 11″ Youth Glove", price: "$40–$50", retailer: "Rawlings.com", ages: "Best for: Ages 8–12 · Infield",
+        { badge: "Infield · 11″", name: "Rawlings Sure Catch 11″ Youth Glove", price: "~$38", retailer: "Rawlings.com", ages: "Best for: Ages 8–12 · Infield",
           url: "https://www.rawlings.com/product/SC110BGH-0%2F3.html",
           amazon: "https://www.amazon.com/dp/B07VDFZ7C9?tag=hoosierdiamon-20",
-          why: "Rawlings' easy-close youth line, with the size chart printed right on the product page: 10.25″–11.5″ is their youth infield range. Good budget leather alternative to the A500." },
+          why: "Rawlings' easy-close youth line, with the size chart printed right on the product page: 10.25″–11.5″ is their youth infield range. Good budget leather alternative to the A500. Out of stock at Rawlings.com as of Nov 28, 2026, and the Rawlings link is the left-hand-throw variant — the Amazon link is the right-hand-throw glove." },
         { badge: "Outfield / Utility · 11.5″", name: "Rawlings Select Pro Lite 11.5″", price: "$79.95", retailer: "JustBallGloves", ages: "Best for: Ages 9–12 · Outfield, pitcher or utility",
           url: "https://www.justballgloves.com/product/rawlings-select-pro-lite-11-5--youth-baseball-glove--spl150bbcb/39174/",
           amazon: "https://www.amazon.com/dp/B08K9DSQZ6?tag=hoosierdiamon-20",
@@ -519,8 +521,8 @@ function pickCard(p) {
         { badge: "First Base Mitt · 11.5″", name: "Rawlings Renegade 11.5″ Youth First Base Mitt", price: "$79.95", retailer: "JustBallGloves", ages: "Best for: Ages 8–12 · First base only",
           url: "https://www.justballgloves.com/product/rawlings-renegade-11-5--youth-baseball-first-base-mitt--r115fbm/30547/",
           why: "Extra padding, a deep pocket and the long curved shape for scooping throws in the dirt — sized for youth hands (listed for ages 7–12). Buy it only once first base is their regular spot." },
-        { badge: "Catcher's Mitt · 32″ around", name: "Wilson A500 32″ Youth Catcher's Mitt", price: "$89.95", retailer: "Wilson.com", ages: "Best for: Ages 7–12 · Catcher only",
-          url: "https://www.wilson.com/en-us/collections/baseball-catcher-mitts?_ics=1638057600312",
+        { badge: "Catcher's Mitt · 32″ around", name: "Wilson A500 32″ Youth Catcher's Mitt", price: "$67.46 on sale (list $89.95)", retailer: "Wilson.com", ages: "Best for: Ages 7–12 · Catcher only",
+          url: "https://www.wilson.com/en-us/products/a500-32-youth-baseball-catchers-mitt-wbw102055",
           why: "Youth-sized mitt with real padding, a closed web and an adjustable wrist — Wilson lists the A500 32″ as its youth learner's mitt for receiving and blocking. If your player catches more than a game a week, their own mitt beats the team bag's." }
       ];
       document.getElementById("glovegrid").innerHTML = GLOVES.map(pickCard).join("");
